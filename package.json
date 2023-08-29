@@ -45,5 +45,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "In the project directory, you can run:",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "graphstick"
+  },
+  "author": "sarojgt",
+  "license": "ISC"
 }
