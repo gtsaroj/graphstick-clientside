@@ -1,0 +1,111 @@
+#contact-details {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#contact-details .details {
+    width: 50%;
+}
+
+#contact-details .details span {
+    font-size: 12px;
+}
+
+#contact-details .details h2 {
+    font-size: 26px;
+    line-height: 40px;
+    padding: 20px 0px;
+}
+
+#contact-details .details h3 {
+    font-size: 16px;
+    padding-bottom: 15px;
+}
+
+#contact-details .details ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 29px;
+    column-gap: 5px;
+    justify-content: initial;
+    align-items: baseline;
+}
+
+#contact-details .details ul li {
+    list-style: none;
+    padding: 0px 20px;
+    position: relative;
+    gap: 10px;
+    margin: 0px 5px 0px 0px;
+    display: flex;
+    gap: 13px;
+}
+
+#contact-details .map {
+    width: 426px;
+    height: 300px;
+}
+
+#contact-details .map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: first baseline;
+    margin-left: 0px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    padding: 0px;
+
+
+}
+
+#form-details form h2 {
+    font-size: 26px;
+    line-height: 35px;
+    padding: 20px 0px;
+}
+
+#form-details form input {
+    width: 50%;
+    padding: 12px 15px;
+    outline: none;
+    border: 1px solid rgb(232, 230, 230);
+    border-radius: 7px;
+    margin-bottom: 10px;
+    background-color: #dee9df;
+}
+
+#form-details form input:placeholder-shown {
+    font-family: "baloo";
+}
+
+#form-details form button {
+    width: 228px;
+    background-color: #088178;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+    margin: 5px 0px 18px 8px;
+    position: relative;
+}
+
+.aftersubmit {
+    position: absolute;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    top: 167%;
+    left: 91px;
+    font-size: 5px;
+    color: chocolate;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transform: scale(3);
+}

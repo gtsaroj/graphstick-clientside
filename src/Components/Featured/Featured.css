@@ -1,0 +1,35 @@
+.fe-box {
+    cursor: pointer;
+    width: 150px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.1);
+    border: 1px solid #cce7d0;
+    margin: 15px 0px;
+    border-radius: 8px;
+    font-family: 'baloo';
+}
+
+.fe-box h6 {
+    padding: 9px 8px 6px 8px;
+    border-radius: 4px;
+    color: #088178;
+    background-color: #fddde4;
+}
+
+.fe-box img {
+    width: 100px;
+    height: 80px;
+
+}
+
+.fe-box:hover {
+    box-shadow: 10px 10px 54px rgb(0, 0, 0, 0.3);
+}
+
+#features {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}

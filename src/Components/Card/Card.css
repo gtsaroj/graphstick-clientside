@@ -1,0 +1,94 @@
+* {
+    padding: 0%;
+    margin: 0;
+}
+
+
+
+#product1 .pro {
+    position: relative;
+    width: 19%;
+    min-width: 100px;
+    padding: 14px 12px;
+    border: 1px solid #bdd0c0;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.1);
+    margin: 18px;
+    transition: 0.2s ease;
+
+    text-decoration: none;
+}
+
+#product1 .pro img {
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid #088178;
+    margin: 0px;
+    padding: 0%;
+}
+
+#product1 .pro:hover {
+    transform: scale(1.05);
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.3);
+}
+
+#product1 .pro .description {
+    text-align: start;
+    padding: 1px 0px;
+}
+
+#product1 .pro .description span {
+    color: #606063;
+    font-size: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#product1 .pro .description h5 {
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size: 12px;
+}
+
+#product1 .pro .description .star i {
+    font-size: 12px;
+    color: #f6f63cf2;
+}
+
+#product1 .pro .description h4 {
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #088178;
+}
+
+#product1 .pro .cart {
+    /* width: 40px;
+    height: 40px; */
+    padding: 12px;
+    font-size: 12px;
+    border-radius: 50px;
+    background-color: #e8f6ea;
+    color: #088178;
+    border: 1px solid #cce7d0;
+    position: absolute;
+    bottom: -19px;
+    right: -26px;
+    transition: 0.1s ease-in-out;
+}
+
+#product1 .pro .cart:hover {
+    transform: scale(1.1);
+    background-color: #1a1a1a;
+}
+
+
+
+
+.mainContainer {
+
+    display: flex;
+    padding-top: 20px;
+    flex-wrap: wrap;
+
+}

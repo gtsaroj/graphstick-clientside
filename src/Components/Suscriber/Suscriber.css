@@ -1,0 +1,43 @@
+#newspaper {
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgb(3 0 30);
+    margin-bottom: 30px;
+}
+
+#newspaper h2 {
+    color: whitesmoke;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+#newspaper p {
+    color: #606063;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.newstext span {
+    color: sandybrown;
+}
+
+.form input {
+    outline: none;
+    padding: 10px;
+    background-color: aliceblue;
+    border: 1px solid cornsilk;
+}
+
+.form button {
+    padding: 10px;
+    border: 1px solid cornsilk;
+    background-color: #088178;
+    cursor: pointer;
+}
+
+.form {
+    display: flex;
+}

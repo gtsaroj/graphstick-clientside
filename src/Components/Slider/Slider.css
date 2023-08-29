@@ -1,0 +1,54 @@
+#hero {
+    /* background-position: center; */
+
+
+    background-image: url("../features/bgg.avif");
+    background-size: cover;
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+    justify-content: center;
+}
+
+#content {
+    padding: 0px 80px;
+}
+
+#hero h4 {
+    padding-bottom: 5px;
+    font-family: 'baloo';
+    color: rgb(220, 31, 31);
+}
+
+h2 {
+    font-family: 'baloo';
+}
+
+#hero h1 {
+    font-family: "baloo";
+    color: #088178;
+}
+
+#page {
+    text-align: start;
+    font-family: 'baloo';
+}
+
+
+#hero button {
+    cursor: pointer;
+    border: 1px solid rgb(167, 193, 171);
+    width: 100px;
+    font-family: 'baloo';
+    padding: 9px 8px 6px 8px;
+    border-radius: 8px;
+    color: #088178;
+    background-color: #fddde4;
+    transition: 0.2s ease;
+}
+
+#hero button:hover {
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.2);
+}
