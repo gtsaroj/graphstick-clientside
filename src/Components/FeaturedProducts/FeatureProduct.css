@@ -1,7 +1,10 @@
 .pro-container {
     display: flex;
+    flex-direction: row;
     padding-top: 20px;
+    justify-content: flex-start;
     flex-wrap: wrap;
+
 }
 
 .section-p1 {
@@ -23,4 +26,101 @@
 #product1 h2,
 p {
     text-align: center;
+}
+
+
+/*=========================BreakPoint===================== */
+
+/* Medium screen */
+@media screen and (max-width: 768px) {
+    #product1 .pro {
+
+        width: 23%;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    #product1 p {
+        font-size: 12px;
+    }
+
+    #product1 .pro img {
+        width: 100%;
+        border-radius: 7px;
+
+    }
+
+}
+
+/* Small devices */
+@media screen and (max-width: 576px) {
+    fe-box img {
+        width: 242px;
+        height: 157px;
+    }
+
+
+}
+
+/* Very small devices */
+@media screen and (max-width: 450px) {
+    #product1 .pro .cart {
+        display: none;
+    }
+
+    #product1 .pro .description span {
+        font-size: 11px;
+    }
+
+    #product1 .pro .description h5 {
+        padding-top: 3px;
+
+
+    }
+
+    #product1 .pro .description h4 {
+        padding-top: 0px;
+        font-size: 12px;
+    }
+
+    #product1 .pro .description .star i {
+        font-size: 9px;
+        padding: 3px 1px;
+    }
+}
+
+/* Very very small devices */
+@media screen and (max-width: 378px) {
+    #product1 .pro {
+        width: 100%;
+    }
+
+    #product1 .pro img {
+        height: 147px;
+    }
+
+    #product1 .pro .description span {
+        font-size: 13px;
+    }
+
+    #product1 .pro .description .star i {
+        font-size: 12px;
+        padding: 5px 1px;
+    }
+
+    #product1 .pro .description h4 {
+        padding-top: 2px;
+        font-size: 15px;
+    }
+
+    #product1 .pro .cart {
+        display: block;
+    }
+
+    #product1 .pro .cart {
+        padding: 11px;
+        font-size: 13px;
+    }
 }

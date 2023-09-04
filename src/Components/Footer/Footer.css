@@ -58,3 +58,38 @@
     width: 100%;
     color: white;
 }
+
+
+/*=========================BreakPoint===================== */
+
+/* Medium screen */
+@media screen and (max-width: 768px) {
+
+    #bottom .col {
+
+        font-size: 11px;
+    }
+
+    #bottom .col .row img {
+        width: 83px;
+        height: 55px;
+    }
+}
+
+/* Small devices */
+@media screen and (max-width: 576px) {}
+
+/* Very small devices */
+@media screen and (max-width: 378px) {
+    #bottom {
+        padding: 8px 7px 5px 7px;
+        gap: 1rem;
+        justify-content: flex-start;
+    }
+
+    .copywrite {
+
+        font-size: 11px;
+        font-family: monospace;
+    }
+}

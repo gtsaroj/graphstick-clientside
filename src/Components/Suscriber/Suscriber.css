@@ -41,3 +41,33 @@
 .form {
     display: flex;
 }
+
+/*=========================BreakPoint===================== */
+
+/* Medium screen */
+@media screen and (max-width: 768px) {
+    #newspaper h2 {
+
+        font-size: 15px;
+    }
+
+    #newspaper p {
+
+        font-size: 13px;
+    }
+
+    #newspaper {
+
+        gap: 5px;
+    }
+
+    .form {
+        border-radius: 5px;
+    }
+}
+
+/* Small devices */
+@media screen and (max-width: 576px) {}
+
+/* Very small devices */
+@media screen and (max-width: 250px) {}

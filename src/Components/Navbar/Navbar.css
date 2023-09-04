@@ -8,6 +8,7 @@
     position: sticky;
     top: 0%;
     left: 0px;
+    z-index: +2;
 }
 
 #navbar {
@@ -57,8 +58,8 @@ li .link:hover::after {
 }
 
 .mobile {
+
     display: none;
-    align-items: center;
 }
 
 #close {
@@ -88,4 +89,74 @@ li .link:hover::after {
 
 #secondpara span:hover {
     transform: scale(1.1);
+}
+
+/*=========================BreakPoint===================== */
+
+/* Medium screen */
+@media screen and (max-width: 768px) {
+    #header {
+        border: 1px solid black;
+    }
+
+    #navbar {
+        display: flex;
+        flex-direction: column;
+
+        text-align: left;
+        transition: 0.2s ease-in-out;
+        position: fixed;
+        top: 65px;
+        width: 166px;
+        background: antiquewhite;
+        height: 393px;
+        align-items: center;
+        justify-content: flex-start;
+        height: 100%;
+        gap: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    #navbar #secondpara {
+        display: none;
+    }
+
+    .mobile {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .mobile .link {
+        font-size: 20px;
+    }
+
+    .link {
+        width: 50px;
+        border-bottom: 1px solid black;
+
+    }
+
+
+}
+
+/* Small devices */
+@media screen and (max-width: 576px) {}
+
+/* Very small devices */
+@media screen and (max-width: 378px) {
+    #header {
+
+        padding: 10px 15px;
+
+    }
+
+    li .link {
+        width: 50px;
+        background-color: #06d1ff8c;
+        padding: 5px 10px 5px 10px;
+        border-radius: 5px;
+
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
 }

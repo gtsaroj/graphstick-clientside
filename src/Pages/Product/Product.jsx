@@ -64,11 +64,11 @@ const Product = () => {
                     </div>
                     <div className="info">
                         <span>vendor: Polo</span>
-                        <span>Product Type: T-shirt</span>
+                        <span>Product Type: {data?.attributes?.title}</span>
                         <span>Tag: T-shirt, Women, Top</span>
                     </div>
                     <div className="info">
-                        <span>Description</span>
+                        <span>Description: {data?.attributes?.desc}</span>
                         <hr />
                         <span>Additional Information</span>
                         <hr />

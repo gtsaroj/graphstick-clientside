@@ -33,3 +33,81 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+
+/*=========================BreakPoint===================== */
+
+/* Medium screen */
+@media screen and (max-width: 768px) {
+    .fe-box {
+        width: 196px;
+    }
+
+    .fe-box img {
+        width: 105px;
+        height: 87px;
+    }
+
+    .fe-box h6 {
+        font-size: 11px;
+        padding: 12px 10px 12px 10px;
+
+    }
+
+    #features {
+        margin: 38px 4px;
+    }
+}
+
+/* Small devices */
+@media screen and (max-width: 576px) {
+
+    .fe-box {
+        width: 150px;
+    }
+
+    fe-box img {
+        width: 242px;
+        height: 157px;
+    }
+
+    .fe-box h6 {
+        font-size: 8px;
+        padding: 5px 4px 5px 4px;
+    }
+
+
+}
+
+/* Very small devices */
+@media screen and (max-width: 378px) {
+    .fe-box {
+        width: 130px;
+    }
+
+    .fe-box img {
+        width: 99px;
+        height: 67px;
+    }
+
+    .fe-box h6 {
+        font-size: 8px;
+        padding: 5px 4px 5px 4px;
+    }
+}
+
+/* Very small devices */
+@media screen and (max-width: 250px) {
+    fe-box img {
+        width: 242px;
+        height: 157px;
+    }
+
+    .fe-box h6 {
+        font-size: 28px;
+        padding: 10px 5px 8px 5px;
+    }
+
+    .fe-box {
+        width: 400px;
+    }
+}

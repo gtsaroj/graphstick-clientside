@@ -5,6 +5,7 @@ import {
   Outlet, // Import the Routes component
 
 } from "react-router-dom";
+import "./App.css"
 import Navbar from "./Components/Navbar/Navbar";
 import Home from "./Pages/Home/Home";
 import Footer from "./Components/Footer/Footer";
@@ -14,6 +15,9 @@ import About from "./Pages/About/About";
 import BlogPage from "./Components/BlogPage/BlogPage";
 import Contact from "./Pages/Contact/Contact";
 import Cart from "./Components/Cart/Cart";
+import CheckOut_page from "./Components/CheckOut Page/CheckOut_page";
+import { Step } from "@mui/material";
+import Proceed_Step from "./Components/Proceed_Step/Proceed_Step";
 
 const Layout = () => {
   return (
@@ -65,6 +69,10 @@ function App() {
         {
           path: "cart",
           element: <Cart />
+        },
+        {
+          path: "/checkout",
+          element: <CheckOut_page />
         }
 
       ]
@@ -72,11 +80,11 @@ function App() {
 
   ])
   return (
-    <div className="App">
 
-      <RouterProvider router={router} />
-    </div>
-  );
+
+    <RouterProvider router={router} />
+
+  )
 }
 
 export default App;

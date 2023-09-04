@@ -11,18 +11,18 @@
     min-width: 100px;
     padding: 14px 12px;
     border: 1px solid #bdd0c0;
-    border-radius: 25px;
+    border-radius: 10px;
     cursor: pointer;
     box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.1);
     margin: 18px;
-    transition: 0.2s ease;
+    transition: 0.2s ease-in-out;
 
     text-decoration: none;
 }
 
 #product1 .pro img {
     width: 100%;
-    border-radius: 20px;
+    border-radius: 10px;
     border: 1px solid #088178;
     margin: 0px;
     padding: 0%;
@@ -92,3 +92,67 @@
     flex-wrap: wrap;
 
 }
+
+
+/*=========================BreakPoint===================== */
+
+/* Medium screen */
+@media screen and (max-width: 768px) {
+    #product1 .pro img {
+
+        height: 125px;
+    }
+
+    .pro-container {
+        justify-content: space-between;
+    }
+
+    #product1 .pro .description span {
+        font-size: 12px;
+    }
+
+    #product1 .pro .description h5 {
+        font-size: 12px;
+    }
+
+    #product1 .pro .description .star i {
+        font-size: 11px;
+        padding: 5px 1px;
+    }
+
+
+    #product1 .pro .cart {
+        padding: 10px;
+        font-size: 11px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    #product1 p {
+
+        font-size: 16px;
+    }
+
+    #product1 .pro .description h4 {
+        padding-top: 7px;
+        font-size: 12px;
+
+    }
+}
+
+/* Small devices */
+@media screen and (max-width: 576px) {
+    #product1 .pro {
+
+        width: 38%;
+    }
+
+    .pro-container {
+        justify-content: space-between;
+    }
+}
+
+/* Very small devices */
+@media screen and (max-width: 250px) {}

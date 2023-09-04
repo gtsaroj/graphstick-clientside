@@ -12,8 +12,12 @@
     justify-content: center;
 }
 
+
 #content {
-    padding: 0px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    padding: 0px 0px 0px 10px;
 }
 
 #hero h4 {
@@ -43,7 +47,7 @@ h2 {
     width: 100px;
     font-family: 'baloo';
     padding: 9px 8px 6px 8px;
-    border-radius: 8px;
+    border-radius: 5px;
     color: #088178;
     background-color: #fddde4;
     transition: 0.2s ease;
@@ -51,4 +55,68 @@ h2 {
 
 #hero button:hover {
     box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.2);
+}
+
+/*=========================BreakPoint===================== */
+
+/* Medium screen */
+@media screen and (max-width: 768px) {
+    #hero {
+        height: 41vh;
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 13px;
+    }
+
+    #page {
+        font-size: 13px;
+    }
+
+}
+
+/* Small devices */
+@media screen and (max-width: 576px) {
+    #hero {
+        height: 28vh;
+        width: 100%;
+    }
+
+    #hero button {
+        font-size: 10px;
+        padding: 5px 9px 5px 9px;
+        width: 75px;
+
+    }
+
+    #hero h1 {
+        font-size: 12px;
+    }
+
+    #hero h2 {
+        font-size: 15px;
+    }
+
+    #page {
+        font-size: 12px;
+    }
+}
+
+/* Very small devices */
+@media screen and (max-width: 378px) {
+    #hero {
+        height: 23vh;
+        width: 100%;
+
+    }
+}
+
+/* very very smal devices */
+@media screen and (max-width: 278px) {
+    #hero {
+        height: 18vh;
+        width: 100%;
+    }
+
 }
