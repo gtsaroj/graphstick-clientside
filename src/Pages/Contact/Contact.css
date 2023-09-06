@@ -1,3 +1,7 @@
+/* *{
+    border: 2px solid black;
+} */
+
 #contact-details {
 
     display: flex;
@@ -45,8 +49,8 @@
 }
 
 #contact-details .map {
-    width: 426px;
-    height: 300px;
+    width: 326px;
+    height: 250px;
 }
 
 #contact-details .map iframe {
@@ -55,14 +59,14 @@
 }
 
 form {
-    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: first baseline;
+    align-items: baseline;
     margin-left: 0px;
     margin-top: 15px;
     margin-bottom: 30px;
     padding: 0px;
+    justify-content: center;
 
 
 }
@@ -83,9 +87,7 @@ form {
     background-color: #dee9df;
 }
 
-#form-details form input:placeholder-shown {
-    font-family: "baloo";
-}
+
 
 #form-details form button {
     width: 228px;
@@ -108,4 +110,73 @@ form {
     color: chocolate;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     transform: scale(3);
+}
+
+/* =============================BreakPoint========================== */
+@media screen and (max-width :768px) {
+
+
+
+    #contact-details .details h2 {
+        font-size: 12px;
+    }
+
+
+
+    #contact-details .details ul {
+        justify-content: baseline;
+        row-gap: 14px
+    }
+
+    #contact-details .map {
+        width: fit-content;
+        height: fit-content;
+        margin: 30px 0px;
+    }
+}
+
+@media screen and (max-width :568px) {
+    #contact-details .details {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: baseline;
+        width: 100%;
+    }
+
+    #contact-details {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width :400px) {
+
+    #form-details form input {
+        width: 80vw;
+
+    }
+
+    #form-details form textarea {
+        width: 80vw;
+        height: 100px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        margin-left: 0px;
+        margin-top: 15px;
+        margin-bottom: 30px;
+        padding: 0px;
+        flex-wrap: wrap;
+        align-content: center;
+        gap: 10px;
+    }
+
+    #form-details form button {
+        width: 150px;
+        padding: 8px 0px 8px 0px;
+    }
+
 }

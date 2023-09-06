@@ -1,9 +1,11 @@
 import { React, useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link, redirect } from 'react-router-dom'
 import "./Cart.css"
 import { useDispatch, useSelector } from 'react-redux'
 import { removeItem } from '../../CardReducer/CardReducer';
 import ProductionQuantityLimitsIcon from '@mui/icons-material/ProductionQuantityLimits';
+
+import { toast, ToastContainer } from 'react-toastify';
 
 
 
@@ -12,11 +14,31 @@ const Cart = () => {
 
 
     const [empty, setEmpty] = useState(true);
+    const [checkout, setCheckout] = useState(false);
 
+
+
+    // }
 
 
     const products = useSelector(state => state.cart.products);
 
+
+    //     function handleCheck() {
+
+    //         if (products?.length == 0) {
+    //             toast.error("Please add To cart")
+    //             setCheckout(true)
+
+
+    //         }
+    //         else if (products?.map((item) => item.id)) {
+    //             toast.success("process to checkout")
+    // redirect.push()
+    //         }
+
+
+    //     }
 
     useEffect(() => {
         if (products.length === 0) {
@@ -85,7 +107,7 @@ const Cart = () => {
                         <tr className="subtotal">
                             <td>Subtotal:  </td>
                             <td>{total()}</td>
-                            <Link to={"/checkout"} state={{ products }} className='link'> <td>Proceed to Checkout</td></Link>
+                            <Link to={"/checkout"} state={{ products }} className='link' > <td>Proceed to Checkout</td></Link>
                         </tr>
                     </tfoot>
 
