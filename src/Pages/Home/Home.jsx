@@ -16,10 +16,10 @@ const Home = () => {
 
             <Slider />
             <Featured />
-            <FeaturedProduct type={"Featured Products"} />
+            <FeaturedProduct type={"featured"} />
             <CrazyDeal />
             <Suscriber />
-            <FeaturedProduct type={"Trending Products"} />
+            <FeaturedProduct type={"trending"} />
 
         </div>
     )

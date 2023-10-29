@@ -15,7 +15,7 @@ const Card = ({ item }) => {
     return (
 
         <Link class="pro" to={`/product/${item.id}`}>
-            <img src={process.env.REACT_APP_API_UPLOAD + item?.attributes?.Img?.data?.attributes?.url} alt="" />
+            <img src={process.env.REACT_APP_API_UPLOAD + item?.attributes?.img?.data?.attributes?.url} alt="" />
             <div class="description">
                 <span>Model 05</span>
                 <h5>{item?.attributes?.title} </h5>

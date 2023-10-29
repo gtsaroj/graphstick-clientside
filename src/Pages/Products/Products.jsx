@@ -10,7 +10,7 @@ const Products = () => {
     return (
         <div className="ProductsPage">
             <Slider />
-            <FeaturedProduct type={"All products are available here"} />
+            <FeaturedProduct typo={"All products are available here"} />
 
         </div>
     )

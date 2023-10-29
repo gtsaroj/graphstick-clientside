@@ -30,8 +30,8 @@ const Product = () => {
             <div className="product">
                 <div className="left">
                     <div className="images">
-                        <img src={process.env.REACT_APP_API_UPLOAD + data?.attributes?.Img?.data?.attributes?.url} alt="" onClick={(e) => setselectedImg("Img")} />
-                        <img src={process.env.REACT_APP_API_UPLOAD + data?.attributes?.Img?.data?.attributes?.url} alt="" onClick={(e) => setselectedImg("Img")} />
+                        <img src={process.env.REACT_APP_API_UPLOAD + data?.attributes?.img?.data?.attributes?.url} alt="" onClick={(e) => setselectedImg("Img")} />
+                        <img src={process.env.REACT_APP_API_UPLOAD + data?.attributes?.img?.data?.attributes?.url} alt="" onClick={(e) => setselectedImg("Img")} />
                     </div>
                     <div className="mainImg">
                         <img src={process.env.REACT_APP_API_UPLOAD + data?.attributes[selectedImg]?.data?.attributes?.url} alt="" />
