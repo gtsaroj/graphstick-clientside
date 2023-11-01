@@ -5,6 +5,7 @@
 #contact-details {
 
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     font-family: Verdana, Geneva, Tahoma, sans-serif;

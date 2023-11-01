@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import "./CheckOut.scss";
 import axios from 'axios';
-import Cart from "../Cart/Cart"
-import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import KhaltiCheckout from "khalti-checkout-web";
 
@@ -15,7 +13,7 @@ const CheckOut_page = () => {
   const total = () => {
     let total = 0;
     products.forEach(element => {
-      total += element.Price * element.quantity;
+      total += element.price * element.quantity;
 
     });
     return total.toFixed(2)

@@ -1,17 +1,21 @@
 import { React, useEffect, useState } from 'react'
-import { Link, redirect } from 'react-router-dom'
 import "./Cart.css"
 import { useDispatch, useSelector } from 'react-redux'
 import { removeItem } from '../../CardReducer/CardReducer';
-import ProductionQuantityLimitsIcon from '@mui/icons-material/ProductionQuantityLimits';
+import ProductionQuantityLimitsIcon from '@mui/icons-material/ProductionQuantityLimits'
+import { Link, useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
 
-import { toast, ToastContainer } from 'react-toastify';
+
+
 
 
 
 
 const Cart = () => {
 
+ const navigate = useNavigate()
+ console.log(navigate)
 
     const [empty, setEmpty] = useState(true);
     const [checkout, setCheckout] = useState(false);
@@ -24,21 +28,18 @@ const Cart = () => {
     const products = useSelector(state => state.cart.products);
 
 
-    //     function handleCheck() {
+        function handleCheck() {
 
-    //         if (products?.length == 0) {
-    //             toast.error("Please add To cart")
-    //             setCheckout(true)
+            if(products?.length > 0){
+navigate('/checkout', {state: {products}})
+            }
+            else{
+                toast.error("please add to cart!")
+            }
 
-
-    //         }
-    //         else if (products?.map((item) => item.id)) {
-    //             toast.success("process to checkout")
-    // redirect.push()
-    //         }
+        }
 
 
-    //     }
 
     useEffect(() => {
         if (products.length === 0) {
@@ -54,7 +55,7 @@ const Cart = () => {
     const total = () => {
         let total = 0;
         products.forEach(element => {
-            total += element.Price * element.quantity;
+            total += element.price * element.quantity;
 
         });
         return total.toFixed(2)
@@ -94,10 +95,10 @@ const Cart = () => {
 
                                 <tr className='cart-container' key={item.id}  >
                                     <td onClick={() => handleRemove(item.id)} className='removeButton'><i className="far fa-times-circle"></i></td>
-                                    <td ><img src={item.Img} alt="" /></td>
-                                    <td>{item.Price}</td>
-                                    <td> <span>{item.quantity}×{item.Price}</span></td>
-                                    <td>{item.Price * item.quantity}</td>
+                                    <td ><img src={item.img} alt="" /></td>
+                                    <td>{item.price}</td>
+                                    <td> <span>{item.quantity}×{item.price}</span></td>
+                                    <td>{item.price * item.quantity}</td>
                                 </tr>
 
                             </tbody>
@@ -107,8 +108,12 @@ const Cart = () => {
                         <tr className="subtotal">
                             <td>Subtotal:  </td>
                             <td>{total()}</td>
-                            <Link to={"/checkout"} state={{ products }} className='link' > <td>Proceed to Checkout</td></Link>
+                            {
+ <Link  state={{ products }} className='link'  onClick={handleCheck}> <td>Proceed to checkout</td></Link>
+                            }
+                           
                         </tr>
+                        <ToastContainer />
                     </tfoot>
 
 

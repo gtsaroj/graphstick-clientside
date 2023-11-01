@@ -51,7 +51,7 @@ const Navbar = () => {
 
                     <Link className="link" to="/cart">
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i></Link>
-                    <span>{products.length || products.length == 0 && " "}</span>
+                    <span>{products.length || products.length === 0 && " "}</span>
                 </li>
 
             </ul>

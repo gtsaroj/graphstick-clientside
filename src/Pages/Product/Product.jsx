@@ -17,7 +17,7 @@ const Product = () => {
     const { data, error, loading } = useFetch(`/products/${id}?populate=*`)
 
 
-    const [selectedImg, setselectedImg] = useState("Img");
+    const [selectedImg, setselectedImg] = useState("img");
 
     const [quantity, setquantity] = useState(1);
 
@@ -27,14 +27,14 @@ const Product = () => {
 
     return (
         <>
-            <div className="product">
+           {error ? "error occured" : loading ? "please wait..." : <div className="product">
                 <div className="left">
                     <div className="images">
-                        <img src={process.env.REACT_APP_API_UPLOAD + data?.attributes?.img?.data?.attributes?.url} alt="" onClick={(e) => setselectedImg("Img")} />
-                        <img src={process.env.REACT_APP_API_UPLOAD + data?.attributes?.img?.data?.attributes?.url} alt="" onClick={(e) => setselectedImg("Img")} />
+                        <img src={ data?.attributes?.img?.data?.attributes?.url} alt="" onClick={(e) => setselectedImg("img")} />
+                        <img src={ data?.attributes?.img?.data?.attributes?.url} alt="" onClick={(e) => setselectedImg("img")} />
                     </div>
                     <div className="mainImg">
-                        <img src={process.env.REACT_APP_API_UPLOAD + data?.attributes[selectedImg]?.data?.attributes?.url} alt="" />
+                        <img src={ data?.attributes[selectedImg]?.data?.attributes?.url} alt="" />
                     </div>
                 </div>
                 <div className="right">
@@ -49,8 +49,8 @@ const Product = () => {
 
                     <button className="add" onClick={() => dispatch(addToCart({
                         id: data.id,
-                        Img: process.env.REACT_APP_API_UPLOAD + data.attributes.Img?.data.attributes.url,
-                        Price: data.attributes.Price,
+                        img:data.attributes.img?.data.attributes.url,
+                        price: data.attributes.price,
                         desc: data.attributes.desc,
                         title: data.attributes.title,
                         quantity
@@ -78,7 +78,7 @@ const Product = () => {
                 </div>
 
 
-            </div >
+            </div >}
         </>
     )
 }
