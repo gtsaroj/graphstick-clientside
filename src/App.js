@@ -15,10 +15,7 @@ import About from "./Pages/About/About";
 import BlogPage from "./Components/BlogPage/BlogPage";
 import Contact from "./Pages/Contact/Contact";
 import Cart from "./Components/Cart/Cart";
-import CheckOut_page from "./Components/CheckOut Page/CheckOut_page";
-import { Step } from "@mui/material";
-import Proceed_Step from "./Components/Proceed_Step/Proceed_Step";
-
+import CheckOutPage from "./Components/CheckOut Page/CheckOutPage";
 const Layout = () => {
   return (
     <div className="homePage">
@@ -72,7 +69,7 @@ function App() {
         },
         {
           path: "/checkout",
-          element: <CheckOut_page />
+          element: <CheckOutPage />
         }
 
       ]

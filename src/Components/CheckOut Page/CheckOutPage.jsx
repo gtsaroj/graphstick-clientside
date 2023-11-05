@@ -5,7 +5,7 @@ import { useLocation } from 'react-router-dom';
 import KhaltiCheckout from "khalti-checkout-web";
 
 
-const CheckOut_page = () => {
+const CheckOutPage = () => {
 
   const location = useLocation();
   const { products } = location.state;
@@ -176,4 +176,4 @@ const CheckOut_page = () => {
   );
 };
 
-export default CheckOut_page;
+export default CheckOutPage;

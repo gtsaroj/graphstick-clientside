@@ -1,7 +1,4 @@
 import React from 'react'
-import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder"
-import BalanceIcon from "@mui/icons-material/Balance"
 import "./Product.scss"
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
@@ -11,7 +8,6 @@ import { addToCart } from "../../CardReducer/CardReducer"
 const Product = () => {
 
     const id = useParams().id;
-    console.log(id)
 
 
     const { data, error, loading } = useFetch(`/products/${id}?populate=*`)
@@ -56,11 +52,11 @@ const Product = () => {
                         quantity
 
                     }))}>
-                        <AddShoppingCartIcon />
+                        {/* <AddShoppingCartIcon /> */}
                     </button>
                     <div className="link">
-                        <div className="item"><FavoriteBorderIcon />Add To Wish List</div>
-                        <div className="item"><BalanceIcon />Add To COMPARE</div>
+                        <div className="item">{/*<FavoriteBorderIcon />A*/}dd To Wish List</div>
+                        <div className="item"> {/*<BalanceIcon />*/}Add To COMPARE</div> 
                     </div>
                     <div className="info">
                         <span>vendor: Polo</span>

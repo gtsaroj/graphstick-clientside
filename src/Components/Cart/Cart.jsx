@@ -2,7 +2,7 @@ import { React, useEffect, useState } from 'react'
 import "./Cart.css"
 import { useDispatch, useSelector } from 'react-redux'
 import { removeItem } from '../../CardReducer/CardReducer';
-import ProductionQuantityLimitsIcon from '@mui/icons-material/ProductionQuantityLimits'
+// import ProductionQuantityLimitsIcon from '@mui/icons-material/ProductionQuantityLimits'
 import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 
@@ -86,7 +86,7 @@ navigate('/checkout', {state: {products}})
                     </thead>
                     {empty ?
                         <div className="emptyCart">
-                            <ProductionQuantityLimitsIcon className='cartIcons' style={{ fontSize: "7rem" }} />
+                            {/* <ProductionQuantityLimitsIcon className='cartIcons' style={{ fontSize: "7rem" }} /> */}
                             <p>Your Cart is empty</p>
                         </div>
 
