@@ -1,5 +1,6 @@
 import React from 'react'
 import "./Slider.css"
+import { Link } from 'react-router-dom'
 
 
 const Slider = () => {
@@ -9,9 +10,10 @@ const Slider = () => {
                 <h4>Trade-in-offer</h4>
                 <h2>Super value deals</h2>
                 <h1>On all Design</h1>
-                <p id="page">Save More With Coupon & Up to 70% off!
+                <p id="page">Buy Your Favourite Products
                 </p>
-                <button>Shop Now</button>
+                <Link to={"/Products/:id"}><button>Shop Now</button></Link>
+                
             </div>
         </section>
     )

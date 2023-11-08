@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react'
 import "./Navbar.css"
 import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-// import WidgetsIcon from '@mui/icons-material/Widgets';
+import WidgetsIcon from '@mui/icons-material/Widgets';
 import { useEffect } from 'react';
 
 const Navbar = () => {
@@ -58,7 +58,7 @@ const Navbar = () => {
             <div class="mobile" >
                 <Link className='link' to={"/cart"}><i class="fa fa-shopping-cart" aria-hidden="true"></i></Link>
                 <div className="div" onClick={handleMove}>
-                    {/* <WidgetsIcon /> */}
+                    <WidgetsIcon />
                 </div>
 
             </div>
