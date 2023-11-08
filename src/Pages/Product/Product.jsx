@@ -5,6 +5,9 @@ import { useParams } from 'react-router-dom';
 import useFetch from '../../Hook/useFetch';
 import { useDispatch } from 'react-redux';
 import { addToCart } from "../../CardReducer/CardReducer"
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import BalanceIcon from '@mui/icons-material/Balance';
 const Product = () => {
 
     const id = useParams().id;
@@ -25,10 +28,7 @@ const Product = () => {
         <>
            {error ? "error occured" : loading ? "please wait..." : <div className="product">
                 <div className="left">
-                    <div className="images">
-                        <img src={ data?.attributes?.img?.data?.attributes?.url} alt="" onClick={(e) => setselectedImg("img")} />
-                        <img src={ data?.attributes?.img?.data?.attributes?.url} alt="" onClick={(e) => setselectedImg("img")} />
-                    </div>
+                    
                     <div className="mainImg">
                         <img src={ data?.attributes[selectedImg]?.data?.attributes?.url} alt="" />
                     </div>
@@ -52,11 +52,11 @@ const Product = () => {
                         quantity
 
                     }))}>
-                        {/* <AddShoppingCartIcon /> */}
+                        <AddShoppingCartIcon />
                     </button>
                     <div className="link">
-                        <div className="item">{/*<FavoriteBorderIcon />A*/}dd To Wish List</div>
-                        <div className="item"> {/*<BalanceIcon />*/}Add To COMPARE</div> 
+                        <div className="item"><FavoriteBorderIcon />Add To Wish List</div>
+                        <div className="item"> <BalanceIcon />Add To COMPARE</div> 
                     </div>
                     <div className="info">
                         <span>vendor: Polo</span>

@@ -7,30 +7,25 @@
 
 #product1 .pro {
     position: relative;
-    width: 19%;
-    min-width: 100px;
-    padding: 14px 12px;
-    border: 1px solid #bdd0c0;
-    border-radius: 10px;
+    width: 13%;
+    min-width: 125px;
+    padding: 8px 11px;
     cursor: pointer;
-    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.1);
-    margin: 18px;
     transition: 0.2s ease-in-out;
-
+    margin: 4px;
     text-decoration: none;
+  
+   
 }
 
 #product1 .pro img {
-    width: 100%;
-    border-radius: 10px;
-    border: 1px solid #088178;
-    margin: 0px;
-    padding: 0%;
+    width: 100%;    
+    border-radius: 2px;
 }
 
 #product1 .pro:hover {
-    transform: scale(1.05);
     box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.3);
+  
 }
 
 #product1 .pro .description {
@@ -52,7 +47,7 @@
 
 #product1 .pro .description .star i {
     font-size: 12px;
-    color: #f6f63cf2;
+    color:#faca51;
 }
 
 #product1 .pro .description h4 {
@@ -68,9 +63,7 @@
     padding: 12px;
     font-size: 12px;
     border-radius: 50px;
-    background-color: #e8f6ea;
     color: #088178;
-    border: 1px solid #cce7d0;
     position: absolute;
     bottom: 18px;
     right: 10px;
@@ -100,11 +93,7 @@
 @media screen and (max-width: 768px) {
     #product1 .pro img {
 
-        height: 125px;
-    }
-
-    .pro-container {
-        justify-content: space-between;
+        height: 113px;
     }
 
     #product1 .pro .description span {
@@ -144,15 +133,41 @@
 
 /* Small devices */
 @media screen and (max-width: 576px) {
-    #product1 .pro {
 
-        width: 38%;
-    }
-
-    .pro-container {
-        justify-content: space-between;
-    }
 }
 
 /* Very small devices */
-@media screen and (max-width: 250px) {}
+@media screen and (max-width: 376px) {
+    .pro{     
+        padding: 3px 2px;
+        margin: 0px;
+    
+      }
+        #product1 .pro img {
+            height: 123px;
+           
+        }
+    
+        #product1 .pro .description span {
+            font-size: 13px;
+        }
+    
+        #product1 .pro .description .star i {
+            font-size: 12px;
+            padding: 5px 1px;
+        }
+    
+        #product1 .pro .description h4 {
+            padding-top: 2px;
+            font-size: 15px;
+        }
+    
+        #product1 .pro .cart {
+            display: block;
+        }
+    
+        #product1 .pro .cart {
+            padding: 11px;
+            font-size: 13px;
+        }
+}

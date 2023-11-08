@@ -46,12 +46,7 @@ p {
         font-size: 12px;
     }
 
-    #product1 .pro img {
-        width: 100%;
-        border-radius: 7px;
-
-    }
-
+   
 }
 
 /* Small devices */
@@ -93,16 +88,16 @@ p {
 
 /* Very very small devices */
 @media screen and (max-width: 378px) {
-    #product1 .pro {
-        width: 100%;
-    }
-
+   .pro-container{
+    justify-content: space-around;
+   }
+ 
     #product1 .pro img {
-        height: 147px;
+        height: 132px;
     }
 
     #product1 .pro .description span {
-        font-size: 13px;
+        font-size: 9px;
     }
 
     #product1 .pro .description .star i {

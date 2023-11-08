@@ -19,13 +19,14 @@ const Card = ({ item }) => {
             <div class="description">
                 <span>Model 05</span>
                 <h5>{item?.attributes?.title} </h5>
+                <h4>{item?.attributes?.price}</h4>
                 <div class="star">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                 </div>
-                <h4>{item?.attributes?.price}</h4>
+              
             </div>
             <div onClick={() => {
                 if (data && data.id) {
