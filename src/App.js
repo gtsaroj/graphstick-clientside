@@ -16,6 +16,8 @@ import BlogPage from "./Components/BlogPage/BlogPage";
 import Contact from "./Pages/Contact/Contact";
 import Cart from "./Components/Cart/Cart";
 import CheckOutPage from "./Components/CheckOut Page/CheckOutPage";
+import Signup from "./Account Manage/Signup";
+import { Login } from "@mui/icons-material";
 const Layout = () => {
   return (
     <div className="homePage">
@@ -70,6 +72,14 @@ function App() {
         {
           path: "/checkout",
           element: <CheckOutPage />
+        },
+        {
+          path: '/signup',
+          element: <Signup/>
+        },
+        {
+          path: "/login",
+          element: <Login/>
         }
 
       ]

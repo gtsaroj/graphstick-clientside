@@ -1,0 +1,52 @@
+.signup{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    place-items:  center;
+    background-color: rgb(161, 184, 176);
+    position:absolute;
+    right: 330px;
+    width: 500px;
+    height: 400px;
+    top: 100px;
+    border-radius: 4px;
+}
+
+form{
+   display: flex;
+   flex-direction: row;
+   gap: 10px;
+   align-items: center;
+}
+
+.fullname{
+    display: flex;
+    flex-direction: row;
+    gap: 9px;
+}
+ .fullname input{
+    width: 150px;
+    padding: 11px 3px;
+    outline: none;
+ }
+   .email input, .password input,.password input, .confirmpassword input {
+    width: 300px;
+    padding: 7px 12px;
+    outline: none;
+  }
+  .policy{
+    width: 318px;
+  }
+  input{
+    border-radius: 3px;
+    border: none;
+  }
+  .auth{
+    width: 150px;
+    background-color: rgb(84, 84, 253);
+    padding: 7px 12px;
+    border-radius: 5px;
+    border: none;
+  }
+  .auth:focus{
+    background-color: rgb(59, 59, 216);
+  }

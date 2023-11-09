@@ -28,7 +28,6 @@ const Product = () => {
         <>
            {error ? "error occured" : loading ? "please wait..." : <div className="product">
                 <div className="left">
-                    
                     <div className="mainImg">
                         <img src={ data?.attributes[selectedImg]?.data?.attributes?.url} alt="" />
                     </div>
@@ -55,15 +54,15 @@ const Product = () => {
                         <AddShoppingCartIcon />
                     </button>
                     <div className="link">
-                        <div className="item"><FavoriteBorderIcon />Add To Wish List</div>
-                        <div className="item"> <BalanceIcon />Add To COMPARE</div> 
+                        <div className="item"><FavoriteBorderIcon />Add To <br/> WishList</div>
+                        <div className="item"> <BalanceIcon />Add To <br/> COMPARE</div> 
                     </div>
                     <div className="info">
                         <span>vendor: Polo</span>
                         <span>Product Type: {data?.attributes?.title}</span>
                         <span>Tag: T-shirt, Women, Top</span>
                     </div>
-                    <div className="info">
+                    <div className="infos">
                         <span>Description: {data?.attributes?.desc}</span>
                         <hr />
                         <span>Additional Information</span>
