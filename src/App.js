@@ -16,8 +16,8 @@ import BlogPage from "./Components/BlogPage/BlogPage";
 import Contact from "./Pages/Contact/Contact";
 import Cart from "./Components/Cart/Cart";
 import CheckOutPage from "./Components/CheckOut Page/CheckOutPage";
-import Signup from "./Account Manage/Signup";
-import { Login } from "@mui/icons-material";
+import Signup from "./Authenticator/Signup/Signup";
+import Login from "./Authenticator/Login/Login";
 const Layout = () => {
   return (
     <div className="homePage">

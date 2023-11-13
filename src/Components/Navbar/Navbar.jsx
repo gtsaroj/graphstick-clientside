@@ -5,13 +5,10 @@ import { useSelector } from 'react-redux'
 import WidgetsIcon from '@mui/icons-material/Widgets';
 import { useEffect } from 'react';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import Account from '../../Account Manage/Account';
 
 const Navbar = () => {
     const [menuVisible, setMenuVisible] = useState(false);
     const menuRef = useRef(null);
-
-    const [open, setOpen] = useState(false)
 
 
     useEffect(() => {
@@ -55,12 +52,18 @@ const Navbar = () => {
 
                     <Link className="link" to="/cart">
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i></Link>
-                    <span>{products.length || products.length === 0 && " "}</span>
+              <span>{products.length > 0 && products.length}</span>
+
                 </li>
-                <li onClick={()=> setOpen(!open)}> <AccountCircleIcon/> </li>
+                <li className='accountHandle'> <AccountCircleIcon/>
+                <ul className='dropdown'>
+                    <li><Link className='link1' to={"/signup"}>Sign in</Link></li>
+                    <li><Link  className='link1'to={"/login"}>Login</Link></li>
+                </ul>
+                 </li>
 
             </ul>
-            {open && <Account/>}
+
             <div class="mobile" >
                 <Link className='link' to={"/cart"}><i class="fa fa-shopping-cart" aria-hidden="true"></i></Link>
                 <div className="div" onClick={handleMove}>

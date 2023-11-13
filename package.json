@@ -20,6 +20,7 @@
     "axios": "^1.4.0",
     "boxicons": "^2.1.4",
     "core-js": "^3.33.2",
+    "firebase": "^10.6.0",
     "khalti-checkout-web": "^2.2.0",
     "npm": "9.6.7",
     "postcss": "^8.4.31",
