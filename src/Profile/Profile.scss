@@ -1,0 +1,32 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  background-color: rgb(12, 11, 11);
+  padding: 10px 12px;
+  .setting {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+  }
+  .orders {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+  }
+  .wishlist {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+  }
+  .review {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+  }
+  .logout {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+  }
+}
