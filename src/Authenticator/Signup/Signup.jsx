@@ -50,7 +50,7 @@ const SignUp = () => {
         // set the user
         setUser(data.user);
 
-        message.success(`Welcome to Social Cards ${data.user.username}!`);
+        message.success(`Welcome ${data.user.username}!`);
 
         navigate("/", { replace: true });
       }
