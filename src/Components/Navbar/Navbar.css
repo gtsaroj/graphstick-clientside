@@ -133,7 +133,7 @@ li .link:hover::after {
   background-color: rgb(14, 13, 13);
 }
 
-.profile{
+.profile {
   position: absolute;
   display: none;
   flex-direction: column;
@@ -145,28 +145,39 @@ li .link:hover::after {
   /* top: 51px; */
   gap: 10px;
 }
-.setting, .orders, .wihslist, .review, .logout{
- display: flex;
- flex-direction: row;
- gap: 5px;
-
-}
-.accountHandle:hover .profile{
+.setting,
+.orders,
+.wihslist,
+.review,
+.logout {
   display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+.setting:hover,
+.orders:hover,
+.wishlist:hover,
+.review:hover,
+.logout:hover {
+  cursor: pointer;
+}
+.accountHandle:hover .profile {
+  display: flex;
+}
+
+.setting .link1 {
+  text-decoration: none;
+  color: white;
 }
 
 /*=========================BreakPoint===================== */
 
 /* Medium screen */
 @media screen and (max-width: 768px) {
-  #header {
-    border: 1px solid black;
-  }
 
   #navbar {
     display: flex;
     flex-direction: column;
-
     text-align: left;
     transition: 0.2s ease-in-out;
     position: fixed;
@@ -177,10 +188,14 @@ li .link:hover::after {
     align-items: center;
     justify-content: flex-start;
     height: 100%;
-    gap: 20px;
+    gap: 10px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
 
+  li .link.active::after,
+  li .link:hover::after{
+    display: none;
+  }
   #navbar #secondpara {
     display: none;
   }
@@ -194,11 +209,20 @@ li .link:hover::after {
   .mobile .link {
     font-size: 20px;
   }
-
-  .link {
-    width: 50px;
-    border-bottom: 1px solid black;
+  li:hover {
+    background-color: rgb(150, 131, 107);
+    width: 126px;
+    text-align: center;
   }
+  .profile {
+    width: 156px;
+    right: -4px;
+
+    gap: 10px;
+}
+.profile .i{
+  font-size: 12px;
+}
 }
 
 /* Small devices */

@@ -78,20 +78,20 @@ const Navbar = () => {
                 </li>
                  <li className='accountHandle'> <AccountCircleIcon/> { user ? user.username: " "}
 {            user ?   <div className="profile">
-    <div className="setting">
-        <Link to={"/profile"}><SettingsIcon /> <span>Manage My account</span></Link>
+    <div className="setting i">
+        <Link to={"/profile"} className='link1'><SettingsIcon /> <span>Manage My account</span></Link>
         
       </div>
-      <div className="orders">
+      <div className="orders i">
         <InventoryIcon /> My orders
       </div>
-      <div className="wishlist">
+      <div className="wishlist i">
         <FavoriteIcon /> <span>My Whishlist</span>
       </div>
-      <div className="review">
+      <div className="review i">
         <ReviewsIcon /> <span>My Review</span>
       </div>
-      <div className="logout" onClick={handlelogout}>
+      <div className="logout i" onClick={handlelogout}>
         <LogoutIcon /> <span>Logout</span>
       </div>
   
