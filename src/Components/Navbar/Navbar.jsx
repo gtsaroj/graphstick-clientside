@@ -5,6 +5,16 @@ import { useSelector } from 'react-redux'
 import WidgetsIcon from '@mui/icons-material/Widgets';
 import { useEffect } from 'react';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import { CgWebsite } from 'react-icons/cg';
+import { useNavigate } from 'react-router-dom';
+import { useAuthContext } from '../../Context/AuthContext';
+import { removeToken } from '../../Helper';
+import SettingsIcon from "@mui/icons-material/Settings";
+import InventoryIcon from "@mui/icons-material/Inventory";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import ReviewsIcon from "@mui/icons-material/Reviews";
+import LogoutIcon from "@mui/icons-material/Logout";
+import { message } from 'antd';
 
 const Navbar = () => {
     const [menuVisible, setMenuVisible] = useState(false);
@@ -39,6 +49,17 @@ const Navbar = () => {
 
 
     const products = useSelector(state => state.cart.products)
+
+    const {user} = useAuthContext();
+    const navigate = useNavigate();
+     
+    const handlelogout = ()=>{
+        removeToken()
+        navigate('/', {replace: true});
+        message.success(`logout`)
+
+    }
+
     return (
         <section id="header">
             <Link className='link' to="#"><img src={require('../paymentImg/graphstic.png')} alt="" /></Link>
@@ -55,11 +76,30 @@ const Navbar = () => {
               <span>{products.length > 0 && products.length}</span>
 
                 </li>
-                <li className='accountHandle'> <AccountCircleIcon/>
-                <ul className='dropdown'>
+                 <li className='accountHandle'> <AccountCircleIcon/> { user ? user.username: " "}
+{            user ?   <div className="profile">
+    <div className="setting">
+        <Link to={"/profile"}><SettingsIcon /> <span>Manage My account</span></Link>
+        
+      </div>
+      <div className="orders">
+        <InventoryIcon /> My orders
+      </div>
+      <div className="wishlist">
+        <FavoriteIcon /> <span>My Whishlist</span>
+      </div>
+      <div className="review">
+        <ReviewsIcon /> <span>My Review</span>
+      </div>
+      <div className="logout" onClick={handlelogout}>
+        <LogoutIcon /> <span>Logout</span>
+      </div>
+  
+      
+    </div>  :  <ul className='dropdown'>
                     <li><Link className='link1' to={"/signup"}>Sign in</Link></li>
                     <li><Link  className='link1'to={"/login"}>Login</Link></li>
-                </ul>
+                </ul> }
                  </li>
 
             </ul>

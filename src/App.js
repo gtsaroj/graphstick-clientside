@@ -18,6 +18,7 @@ import Cart from "./Components/Cart/Cart";
 import CheckOutPage from "./Components/CheckOut Page/CheckOutPage";
 import Signup from "./Authenticator/Signup/Signup";
 import Login from "./Authenticator/Login/Login";
+import Profile from "./Profile/Profile";
 const Layout = () => {
   return (
     <div className="homePage">
@@ -80,6 +81,10 @@ function App() {
         {
           path: "/login",
           element: <Login/>
+        },
+        {
+          path: "/profile",
+          element: <Profile/>
         }
 
       ]

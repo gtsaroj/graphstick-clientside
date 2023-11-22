@@ -133,6 +133,28 @@ li .link:hover::after {
   background-color: rgb(14, 13, 13);
 }
 
+.profile{
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  background-color: rgb(27, 26, 26);
+  width: 200px;
+  color: white;
+  padding: 5px 7px;
+  right: -74px;
+  /* top: 51px; */
+  gap: 10px;
+}
+.setting, .orders, .wihslist, .review, .logout{
+ display: flex;
+ flex-direction: row;
+ gap: 5px;
+
+}
+.accountHandle:hover .profile{
+  display: flex;
+}
+
 /*=========================BreakPoint===================== */
 
 /* Medium screen */

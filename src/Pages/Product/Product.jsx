@@ -8,6 +8,9 @@ import { addToCart } from "../../CardReducer/CardReducer"
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import BalanceIcon from '@mui/icons-material/Balance';
+import { useAuthContext } from '../../Context/AuthContext';
+import { useNavigate } from 'react-router-dom';
+import { message } from 'antd';
 const Product = () => {
 
     const id = useParams().id;
@@ -17,11 +20,28 @@ const Product = () => {
 
 
     const [selectedImg, setselectedImg] = useState("img");
+const navigate = useNavigate();
 
     const [quantity, setquantity] = useState(1);
 
     const dispatch = useDispatch();
-
+const {user} = useAuthContext();
+const handleAddToCart = () => {
+    if (user) {
+      dispatch(addToCart({
+        id: data.id,
+        img: data.attributes.img?.data.attributes.url,
+        price: data.attributes.price,
+        desc: data.attributes.desc,
+        title: data.attributes.title,
+        quantity
+      }));
+    } else {
+      navigate('/login', { replace: true });
+      message.error('please login the page')
+    }
+  };
+  
 
 
     return (
@@ -42,15 +62,7 @@ const Product = () => {
                         <button onClick={() => setquantity(prev => ((prev) === 1 ? 1 : prev - 1))}>-</button>
                     </div>
 
-                    <button className="add" onClick={() => dispatch(addToCart({
-                        id: data.id,
-                        img:data.attributes.img?.data.attributes.url,
-                        price: data.attributes.price,
-                        desc: data.attributes.desc,
-                        title: data.attributes.title,
-                        quantity
-
-                    }))}>
+                    <button className="add" onClick={handleAddToCart}>
                         <AddShoppingCartIcon />
                     </button>
                     <div className="link">

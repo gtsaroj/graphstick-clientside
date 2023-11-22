@@ -5,6 +5,7 @@
   import { store, persistor } from "./CardReducer/store"
   import { PersistGate } from 'redux-persist/integration/react'
   import AuthProvider from './AuthProvider/AuthProvider';
+  import './index.css'
 
 
   const root = document.getElementById('root');
