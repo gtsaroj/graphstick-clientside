@@ -15,6 +15,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 55px;
 }
 
 li {
@@ -31,12 +32,23 @@ li .link {
   color: black;
   transition: 0.3s ease;
 }
-
-#header img {
-  width: 40px;
-  height: 40px;
-  font-weight: 800;
+  
+.linkImg{
+  position: relative;;
 }
+#header img {
+  position: absolute;
+  width: 81px;
+  height: 70px;
+  font-weight: 800;
+  top: 2px;
+  left: 20px;
+  filter: contrast(175%) brightness(3%);
+  /* filter: drop-shadow(3px 3px red) sepia(100%) drop-shadow(-3px -3px blue); */
+
+
+}
+
 
 li .link:hover,
 li .link.active {

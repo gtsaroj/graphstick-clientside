@@ -62,7 +62,7 @@ const Navbar = () => {
 
     return (
         <section id="header">
-            <Link className='link' to="#"><img src={require('../paymentImg/graphstic.png')} alt="" /></Link>
+            <Link className='link' to="/"><img src={require('../paymentImg/graphstic.png')} alt="" /></Link>
             <ul id="navbar" ref={menuRef} style={{ right: menuVisible ? '0px' : '-250px' }}>
                 <li><Link className='link' to={"/"}>Home</Link></li>
                 <li><Link className='link' to={"/Products/:id"}>Products</Link></li>
