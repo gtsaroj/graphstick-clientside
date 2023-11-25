@@ -29,6 +29,11 @@
   font-weight: 800;
 
 }
+.oldprice{
+    text-decoration: line-through;
+    color: rgb(128, 128, 128);
+
+}
 .deal button {
   padding: 5px 7px;
   background-color: black;

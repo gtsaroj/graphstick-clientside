@@ -7,6 +7,7 @@ import Pagination from '../Pagination/Pagination'
 const FeaturedProduct = ({ type }) => {
 
     const { loading, data, error } = useFetch(`/products?populate=*&[filters][type][$eq]=${type}`)
+
    
 const [currentpage, setCurrentPage]  = useState(1);
 const [postperpage, setPostPerPage] = useState(12);

@@ -14,10 +14,11 @@ import { message } from 'antd';
 const Product = () => {
 
     const id = useParams().id;
+    console.log(id)
 
 
     const { data, error, loading } = useFetch(`/products/${id}?populate=*`)
-
+console.log(data)
 
     const [selectedImg, setselectedImg] = useState("img");
 const navigate = useNavigate();
