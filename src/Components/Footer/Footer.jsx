@@ -54,7 +54,7 @@ const Footer = () => {
                 </div>
             </div>
             <div class="copywrite">
-                ©2023.Tech2 etc- HTML CSS Ecommerce Template
+                ©2023.graphstick Nepal || All right Reservered
             </div>
 
         </footer>

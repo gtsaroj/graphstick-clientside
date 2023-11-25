@@ -78,3 +78,11 @@ tfoot .subtotal {
 .removeButton i:hover {
     transform: scale(1.1);
 }
+ /* ============================BreakDown======================== */
+
+@media screen and (max-width: 778px) {
+    thead tr, tbody tr, tfoot tr{
+        font-size: 12px;
+        gap: 0px;
+    }
+}
