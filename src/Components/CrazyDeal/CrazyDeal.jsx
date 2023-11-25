@@ -20,14 +20,14 @@ const CrazyDeal = () => {
           </span>
           <button> shop now</button>
           <div className="duration">
-            <div className="hours">1 hr</div>
-            <div className="minutes">45 min</div>
-            <div className="seconds">05 sec</div>
+            <div className="hours">00 <br/>hr</div>
+            <div className="minutes">45 <br/>min</div>
+            <div className="seconds">05 <br/>sec</div>
           </div>
         </div>
       </div>
       <div className="figure">
-        <img src={require("../productsImg/10.jpg")} alt="" />
+        <img src={require("./3-removebg-preview.png")} alt="" />
       </div>
     </div>
   );
