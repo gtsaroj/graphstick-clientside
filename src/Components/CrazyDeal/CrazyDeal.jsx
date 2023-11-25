@@ -1,24 +1,36 @@
-import React from 'react'
-import "./CrazyDeal.css"
+import React from "react";
+import "./CrazyDeal.css";
 
 const CrazyDeal = () => {
-    return (
-        <section id="sm-banner" class="section-p1">
-            <div class="banner-box">
-                <h4>Crazy Deal</h4>
-                <h2>Buy 1 Get 1 Free</h2>
-                <p>The best classic sticker are on sell at graphstic</p>
-                <button id="btn">Learn More</button>
+  return (
+    <div className="crazydeal">
+      <div className="deal">
+        <h3>Deal of the Day</h3>
+        <div className="card">
+          <h3>stylish sticker</h3>
+          <div className="price">
+          
+            <div className="oldprice">1500</div>
+            <div className="newprice">900</div>
+          </div>
 
-            </div>
-            <div class="banner-box">
-                <h4>Crazy Deal</h4>
-                <h2>Buy 1 Get 1 Free</h2>
-                <p>The best classic sticker are on sell at graphstic</p>
-                <button id="btn">Learn More</button>
-            </div>
-        </section>
-    )
-}
+          <span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
+            explicabo nobis accusamus reiciendis quasi.
+          </span>
+          <button> shop now</button>
+          <div className="duration">
+            <div className="hours">1 hr</div>
+            <div className="minutes">45 min</div>
+            <div className="seconds">05 sec</div>
+          </div>
+        </div>
+      </div>
+      <div className="figure">
+        <img src={require("../productsImg/10.jpg")} alt="" />
+      </div>
+    </div>
+  );
+};
 
-export default CrazyDeal
+export default CrazyDeal;
