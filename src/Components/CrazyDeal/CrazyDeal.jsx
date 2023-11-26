@@ -34,7 +34,31 @@ const CrazyDeal = () => {
   return (
     <>
       {loading
-        ? "loading.."
+        ?   <div className="crazydeal">
+       <div
+  className="deal"
+  style={{
+    background:
+      'linear-gradient(90deg, #ddd 25%, #f0f0f0 50%, #ddd 75%)',
+    backgroundSize: '200% 100%',
+    animation: 'shimmer 1.5s infinite linear',
+    width: '350px',
+    height: '200px'
+  }} >
+        </div>
+        <div className="figure"
+          style={{
+            background:
+              'linear-gradient(90deg, #ddd 25%, #f0f0f0 50%, #ddd 75%)',
+            backgroundSize: '200% 100%',
+            animation: 'shimmer 1.5s infinite linear',
+            width: '400px',
+            height: '300px'
+          }} 
+        >
+        
+        </div>
+      </div>
         : data?.map((item) => (
             <div className="crazydeal">
               <div className="deal">
