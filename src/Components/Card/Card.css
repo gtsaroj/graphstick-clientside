@@ -87,6 +87,90 @@
 
 }
 
+/* skeleton */
+.pro.skeleton {
+    position: relative;
+    width: 13%;
+    min-width: 150px;
+    padding: 3px 3px;
+    cursor: pointer;
+    margin: 4px;
+    text-decoration: none;
+    overflow: hidden;
+  }
+  
+  .pro.skeleton .skeleton-image {
+    width: 100%;
+    border-radius: 2px;
+    height: 145px;
+    background: linear-gradient(90deg, #ddd 25%, #f0f0f0 50%, #ddd 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite linear;
+  }
+  
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+  
+  .pro.skeleton .description {
+    text-align: start;
+    padding: 1px 0px;
+    background: linear-gradient(90deg, #837f7f 25%, #555454 50%, #534f4f 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite linear;
+    border-radius: 0px 0px 2px 2px;
+  }
+  
+  .pro.skeleton .skeleton-title {
+    width: 60%;
+    height: 20px;
+    background: linear-gradient(90deg, #c96e6e 25%, #eb7171 50%, #c96e6e 75%);
+    margin-bottom: 10px;
+    margin-top: 3px;
+    border-radius: 2px;
+  }
+  
+  .skeleton-price {
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    width: 50px;
+    border-radius: 2px;
+    height: 7px;
+    background: linear-gradient(90deg, #088178 25%, #134223 50%, #088178 75%);
+  }
+  .pro.skeleton .skeleton-cart {
+    padding: 12px;
+    font-size: 12px;
+    border-radius: 50px;
+
+    background-color: #ddd;
+    position: absolute;
+    bottom: 18px;
+    right: 10px;
+    transition: 0.1s ease-in-out;
+  }
+  .pro.skeleton .skeleton-star {
+    width: 20px;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin-right: 5px;
+    display: flex;
+   
+  }
+  .skeleton .star{
+    margin: 7px 3px 7px 3px;
+   
+    display: flex;
+    flex-direction: row;
+  }
+  
 
 /*=========================BreakPoint===================== */
 
