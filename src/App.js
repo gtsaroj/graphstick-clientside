@@ -19,6 +19,7 @@ import CheckOutPage from "./Components/CheckOut Page/CheckOutPage";
 import Signup from "./Authenticator/Signup/Signup";
 import Login from "./Authenticator/Login/Login";
 import Profile from "./Profile/Profile";
+import Offer from "./Pages/Offer/Offer";
 const Layout = () => {
   return (
     <div className="homePage">
@@ -85,6 +86,10 @@ function App() {
         {
           path: "/profile",
           element: <Profile/>
+        },
+        {
+          path: "/offer/:id",
+          element: <Offer/>
         }
 
       ]

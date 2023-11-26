@@ -9,9 +9,7 @@ const Card = ({ item }) => {
 
     const [quantity, setquantity] = useState(1);
     const id = useParams().id
-    const { data, error, loading } = useFetch(`/products/${id}?populate=*`)
 
-    const dispatch = useDispatch()
     return (
 
         <Link class="pro" to={`/product/${item.id}`}>
@@ -28,15 +26,7 @@ const Card = ({ item }) => {
                 </div>
               
             </div>
-            <div onClick={() => {
-                if (data && data.id) {
-                    dispatch(addToCart({
-                        id: data.id,
-                        // other properties...
-                        quantity
-                    }));
-                }
-            }}>
+            <div >
                 <i className="fa fa-shopping-cart cart"></i>
             </div>
 

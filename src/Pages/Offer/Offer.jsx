@@ -1,5 +1,5 @@
 import React from "react";
-import "./Product.scss";
+import "../Product/Product.scss";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import useFetch from "../../Hook/useFetch";
@@ -11,14 +11,18 @@ import BalanceIcon from "@mui/icons-material/Balance";
 import { useAuthContext } from "../../Context/AuthContext";
 import { useNavigate } from "react-router-dom";
 import { message } from "antd";
-const Product = () => {
+import { useLocation } from "react-router-dom";
+
+
+const Offer = () => {
   const id = useParams().id;
   console.log(id);
 
-  const { data, error, loading } = useFetch(`/products/${id}?populate=*`);
+  const { data, error, loading } = useFetch(`/offers?populate=*`);
 
   const [selectedImg, setselectedImg] = useState("img");
   const navigate = useNavigate();
+  const location = useLocation();
 
   const [quantity, setquantity] = useState(1);
 
@@ -28,11 +32,11 @@ const Product = () => {
     if (user) {
       dispatch(
         addToCart({
-          id: data.id,
-          img: data.attributes.img?.data.attributes.url,
-          price: data.attributes.price,
-          desc: data.attributes.desc,
-          title: data.attributes.title,
+          id: productData.id,
+          img: productData.attributes.img?.data.attributes.url,
+          price: productData.attributes.newprice,
+          desc: productData.attributes.desc,
+          title: productData.attributes.title,
           quantity,
         })
       );
@@ -42,26 +46,29 @@ const Product = () => {
     }
   };
 
+  const {productData} = location.state || {};
+  console.log(productData)
+
   return (
     <>
       {error ? (
         error
       ) : loading ? (
         "please wait..."
-      ) : (
+      ) : productData ? (
         <div className="product">
           <div className="left">
             <div className="mainImg">
               <img
-                src={data?.attributes[selectedImg]?.data?.attributes?.url}
+                src={productData?.attributes[selectedImg]?.data?.attributes?.url}
                 alt=""
               />
             </div>
           </div>
           <div className="right">
-            <h1>{data?.attributes?.title}</h1>
-            <span className="price">{data?.attributes?.Price}</span>
-            <p>{data?.attributes?.title}</p>
+            <h1>{productData?.attributes?.title}</h1>
+            <span className="price">{productData?.attributes?.price}</span>
+            <p>{productData?.attributes?.newprice}</p>
             <div className="quantity">
               <button onClick={() => setquantity((prev) => prev + 1)}>+</button>
               <h3>{quantity}</h3>
@@ -90,11 +97,11 @@ const Product = () => {
             </div>
             <div className="info">
               <span>vendor: Polo</span>
-              <span>Product Type: {data?.attributes?.title}</span>
+              <span>Product Type: {productData?.attributes?.title}</span>
               <span>Tag: T-shirt, Women, Top</span>
             </div>
             <div className="infos">
-              <span>Description: {data?.attributes?.desc}</span>
+              <span>Description: {productData?.attributes?.desc}</span>
               <hr />
               <span>Additional Information</span>
               <hr />
@@ -102,9 +109,11 @@ const Product = () => {
             </div>
           </div>
         </div>
+      ) : (
+        <div>Product data not available</div>
       )}
     </>
   );
 };
 
-export default Product;
+export default Offer;

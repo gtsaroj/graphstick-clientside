@@ -32,9 +32,9 @@ li .link {
   color: black;
   transition: 0.3s ease;
 }
-  
-.linkImg{
-  position: relative;;
+
+.linkImg {
+  position: relative;
 }
 #header img {
   position: absolute;
@@ -45,10 +45,7 @@ li .link {
   left: 20px;
   filter: contrast(175%) brightness(3%);
   /* filter: drop-shadow(3px 3px red) sepia(100%) drop-shadow(-3px -3px blue); */
-
-
 }
-
 
 li .link:hover,
 li .link.active {
@@ -108,12 +105,12 @@ li .link:hover::after {
   display: flex;
   flex-direction: column;
   gap: 5px;
-}
-.accountHandle:hover {
-  transition: 0.2s ease-in-out;
+  transition: opacity 0.3s ease-in-out; /* Add a smooth transition for opacity */
+  opacity: 1; 
+  visibility: visible;
 }
 .dropdown {
-  display: none;
+ visibility: hidden;
   background-color: #000000b6;
   height: 200px;
   border-radius: 3px;
@@ -124,6 +121,7 @@ li .link:hover::after {
   right: -72px;
   top: 26px;
   clip-path: polygon(0% 10%, 50% 0%, 100% 10%, 100% 100%, 0% 100%);
+  opacity: 0;
 }
 .dropdown li {
   width: 200px;
@@ -186,14 +184,13 @@ li .link:hover::after {
 
 /* Medium screen */
 @media screen and (max-width: 768px) {
-
   #navbar {
     display: flex;
     flex-direction: column;
     text-align: left;
     transition: 0.2s ease-in-out;
     position: fixed;
-    top: 65px;
+    top: 77px;
     width: 166px;
     background: antiquewhite;
     height: 393px;
@@ -205,7 +202,7 @@ li .link:hover::after {
   }
 
   li .link.active::after,
-  li .link:hover::after{
+  li .link:hover::after {
     display: none;
   }
   #navbar #secondpara {
@@ -231,10 +228,17 @@ li .link:hover::after {
     right: -4px;
 
     gap: 10px;
-}
-.profile .i{
-  font-size: 12px;
-}
+  }
+  .profile .i {
+    font-size: 12px;
+  }
+  .dropdown {
+    right: 166px;
+    top: -20px;
+  }
+  #header{
+    padding: 23px 80px;
+  }
 }
 
 /* Small devices */
@@ -243,16 +247,10 @@ li .link:hover::after {
 
 /* Very small devices */
 @media screen and (max-width: 378px) {
-  #header {
-    padding: 10px 15px;
-  }
 
-  li .link {
-    width: 50px;
-    background-color: #06d1ff8c;
-    padding: 5px 10px 5px 10px;
-    border-radius: 5px;
-
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  .dropdown {
+    right: -1px;
+    top: 27px;
+    width: 168px;
   }
 }

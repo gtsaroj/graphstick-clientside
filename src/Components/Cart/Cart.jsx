@@ -26,6 +26,7 @@ const Cart = () => {
 
 
     const products = useSelector(state => state.cart.products);
+    console.log(products)
 
 
         function handleCheck() {
