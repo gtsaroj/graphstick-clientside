@@ -25,7 +25,22 @@ const currentPosts =  data ? data.slice(firstpostindex, lastpostindex): [];
             <h2>{type}</h2>
             <p>Latest Modern Sticker</p>
             <div class="pro-container">
-                {error ? "Something went wrong!" : currentPosts?.map((item) => (
+                {error ? "Something went wrong!" : loading ?      <div className="pro skeleton">
+      <div className="skeleton-image"></div>
+      <div className="description">
+        <div className="skeleton-modal"></div>
+        <div className="skeleton-title"> </div>
+          <div className="skeleton-price"></div>
+       
+        <div className="star">
+          <div className="skeleton-star"></div>
+          <div className="skeleton-star"></div>
+          <div className="skeleton-star"></div>
+          <div className="skeleton-star"></div>
+        </div>
+        <div className="skeleton-cart"></div>
+      </div>
+    </div>:  currentPosts?.map((item) => (
                     < Card item={item} key={item.id}   />
                 ))}
 

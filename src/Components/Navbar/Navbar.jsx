@@ -53,8 +53,9 @@ const Navbar = () => {
 
   const handlelogout = () => {
     removeToken();
-    navigate("/", { replace: true });
+    navigate("/login", { replace: true });
     message.success(`logout`);
+    
   };
 
   return (
