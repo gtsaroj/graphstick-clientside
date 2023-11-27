@@ -56,24 +56,22 @@ tfoot .subtotal {
 .link {
   text-decoration: none;
   color: black;
-}
-
-/* .removeButton {
-    border: 1px solid black;
-    border-radius: 50%;
-} */
-
-.removeButton i {
-  border: 1px solid black;
-  border-radius: 100%;
-  background-color: black;
-  color: aliceblue;
-  font-size: 20px;
   transition: 0.1s ease-in-out;
+  font-weight: 500;
+}
+ .link:hover{
+  color: rgba(0, 0, 0, 0.815);
+
+ }
+
+
+.removeButton{
+  transition: 0.2s ease-in-out;
 }
 
-.removeButton i:hover {
-  transform: scale(1.1);
+.removeButton:hover {
+  transform: scale(1.08);
+  cursor: pointer;
 }
 /* ============================BreakDown======================== */
 
