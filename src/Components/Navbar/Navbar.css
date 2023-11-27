@@ -136,9 +136,8 @@ li .link:hover::after {
   position: absolute;
   gap: 10px;
   right: -72px;
-  top: 26px;
-  clip-path: polygon(0% 10%, 50% 0%, 100% 10%, 100% 100%, 0% 100%);
-  opacity: 0;
+  top: 22px;
+  clip-path: polygon(0% 7%, 50% 0%, 93% 10%, 100% 100%, 0% 100%);  opacity: 0;
 }
 .dropdown li {
   width: 200px;
@@ -248,8 +247,10 @@ li .link:hover::after {
     font-size: 12px;
   }
   .dropdown {
-    right: 166px;
-    top: -20px;
+    .dropdown {
+      right: 30px;
+      top: -1px;
+  }
   }
   #header {
     padding: 23px 12px;
@@ -266,9 +267,5 @@ li .link:hover::after {
 
 /* Very small devices */
 @media screen and (max-width: 378px) {
-  .dropdown {
-    right: -1px;
-    top: 23px;
-    width: 168px;
-  }
+
 }
