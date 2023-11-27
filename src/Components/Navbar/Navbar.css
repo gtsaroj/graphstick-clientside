@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 80px;
+  padding: 9px 50px;
   background-color: #06d1ff8c;
   box-shadow: 0 3px 5px rgb(43 113 160 / 76%);
   position: sticky;
@@ -38,8 +38,8 @@ li .link {
 }
 #header img {
   position: absolute;
-  width: 81px;
-  height: 70px;
+  width: 76px;
+  height: 66px;
   font-weight: 800;
   top: 2px;
   left: 20px;
@@ -91,10 +91,10 @@ li .link:hover::after {
   text-align: center;
   font-style: bold;
 }
-.link3{
+.link3 {
   position: relative;
 }
-.link4{
+.link4 {
   position: absolute;
   top: 12px;
   right: 136px;
@@ -120,11 +120,11 @@ li .link:hover::after {
 }
 .accountHandle:hover .dropdown {
   transition: opacity 0.3s ease-in-out; /* Add a smooth transition for opacity */
-  opacity: 1; 
+  opacity: 1;
   visibility: visible;
 }
 .dropdown {
- visibility: hidden;
+  visibility: hidden;
   background-color: #000000da;
   height: 200px;
   border-radius: 3px;
@@ -139,7 +139,6 @@ li .link:hover::after {
   top: 26px;
   clip-path: polygon(0% 10%, 50% 0%, 100% 10%, 100% 100%, 0% 100%);
   opacity: 0;
-  
 }
 .dropdown li {
   width: 200px;
@@ -149,8 +148,6 @@ li .link:hover::after {
   padding: 6px 4px;
   align-items: center;
 }
-
-
 
 .profile {
   position: absolute;
@@ -168,17 +165,17 @@ li .link:hover::after {
   opacity: 0;
   clip-path: polygon(0% 10%, 50% 0%, 100% 10%, 100% 100%, 0% 100%);
 }
-.accountHandle:hover .profile{
+.accountHandle:hover .profile {
   visibility: visible;
   transition: opacity 0.3s ease-in-out;
   opacity: 1;
 }
-.link2{
+.link2 {
   text-decoration: none;
-color: white;
+  color: white;
 }
 
-.i{
+.i {
   display: flex;
   flex-direction: row;
   gap: 7px;
@@ -186,20 +183,18 @@ color: white;
   transition: 0.1s ease-in-out;
   color: white;
   text-decoration: none;
-
 }
-.i:hover{
+.i:hover {
   cursor: pointer;
-color: rgb(199, 174, 174);
-gap: 10px;
+  color: rgb(199, 174, 174);
+  gap: 10px;
 }
-.account2{
+.account2 {
   display: flex;
   flex-direction: row;
-justify-content: center;
-gap: 5px;
+  justify-content: center;
+  gap: 5px;
 }
-
 
 /*=========================BreakPoint===================== */
 
@@ -233,16 +228,15 @@ gap: 5px;
   .mobile {
     display: flex;
     flex-direction: row;
-    gap: 2rem;
+    gap: 3rem;
   }
 
   .mobile .link {
-    font-size: 20px;
+    font-size: 18px;
   }
-  li:hover {
-   
-    width: 126px;
-    text-align: center;
+  .div:hover {
+    color: rgb(39, 38, 38);
+    cursor: pointer;
   }
   .profile {
     width: 156px;
@@ -257,8 +251,12 @@ gap: 5px;
     right: 166px;
     top: -20px;
   }
-  #header{
-    padding: 23px 80px;
+  #header {
+    padding: 23px 12px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px;
+    gap: 0px;
   }
 }
 
@@ -268,7 +266,6 @@ gap: 5px;
 
 /* Very small devices */
 @media screen and (max-width: 378px) {
-
   .dropdown {
     right: -1px;
     top: 23px;

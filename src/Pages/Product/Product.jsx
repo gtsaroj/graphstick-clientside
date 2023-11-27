@@ -181,9 +181,9 @@ const Product = () => {
             </div>
           </div>
           <div className="right">
-            <h1>Name: {data?.attributes?.title}</h1>
+            <h1> {data?.attributes?.title}</h1>
             <span className="price">Rs. {data?.attributes?.price}</span>
-            <p>{data?.attributes?.desc}</p>
+            <p>{data?.attributes?.specification}</p>
             <div className="quantity">
               <button onClick={() => setquantity((prev) => prev + 1)}>+</button>
               <h3>{quantity}</h3>

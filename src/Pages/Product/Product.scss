@@ -64,6 +64,12 @@
       // margin: 7px 0px 5px 0px;
       background-color: #2879fe;
       border: none;
+      border-radius: 2px;
+      transition: 0.2s ease-in-out;
+      &:hover{
+        background-color:#287afed3;
+        cursor: pointer;
+      }
       @media screen and (max-width: 578px) {
         position: fixed;
         width: 100%;
@@ -74,9 +80,17 @@
     .link {
       display: flex;
       flex-direction: row;
-      // margin: 7px 0px 100px 0px;
-      gap: 15px;
+     width: 100%;
+      gap: 20px;
       color: #2879fe;
+      .item{
+        transition: 0.2s ease-in-out;
+        &:hover{
+          cursor: pointer;
+          color:#287afed3;
+        }
+      }
+     
       @media screen and (max-width: 578px) {
         justify-content: space-evenly;
         width: 100%;
