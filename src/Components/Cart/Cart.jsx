@@ -2,9 +2,10 @@ import { React, useEffect, useState } from 'react'
 import "./Cart.css"
 import { useDispatch, useSelector } from 'react-redux'
 import { removeItem } from '../../CardReducer/CardReducer';
-// import ProductionQuantityLimitsIcon from '@mui/icons-material/ProductionQuantityLimits'
+import ProductionQuantityLimitsIcon from '@mui/icons-material/ProductionQuantityLimits'
 import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 
 
@@ -87,7 +88,7 @@ navigate('/checkout', {state: {products}})
                     </thead>
                     {empty ?
                         <div className="emptyCart">
-                            {/* <ProductionQuantityLimitsIcon className='cartIcons' style={{ fontSize: "7rem" }} /> */}
+                            <ProductionQuantityLimitsIcon className='cartIcons' style={{ fontSize: "7rem" }} />
                             <p>Your Cart is empty</p>
                         </div>
 
@@ -95,7 +96,7 @@ navigate('/checkout', {state: {products}})
                             <tbody>
 
                                 <tr className='cart-container' key={item.id}  >
-                                    <td onClick={() => handleRemove(item.id)} className='removeButton'><i className="far fa-times-circle"></i></td>
+                                    <td onClick={() => handleRemove(item.id)} className='removeButton'><DeleteIcon/></td>
                                     <td ><img src={item.img} alt="" /></td>
                                     <td>{item.price}</td>
                                     <td> <span>{item.quantity}×{item.price}</span></td>

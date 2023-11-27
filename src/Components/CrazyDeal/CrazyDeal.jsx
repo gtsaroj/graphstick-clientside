@@ -33,15 +33,21 @@ const CrazyDeal = () => {
             style={{
               width: "350px",
               height: "200px",
+               background: "linear-gradient(90deg, #ddd 25%, #f0f0f0 50%, #ddd 75%)",
+    backgroundSize: "200% 100%",
+    animation: "shimmer 1.5s infinite linear",
             }}
           ></div>
-          <div
-            className="figure skeleton"
-            style={{
-              width: "400px",
-              height: "300px",
-            }}
-          ></div>
+        <div
+  className="figure skeleton"
+  style={{
+    width: "400px",
+    height: "300px",
+    background: "linear-gradient(90deg, #ddd 25%, #f0f0f0 50%, #ddd 75%)",
+    backgroundSize: "200% 100%",
+    animation: "shimmer 1.5s infinite linear",
+  }}
+></div>
         </div>
       ) : dealAvailable && data && data.length > 0 ? (
         data.map((item) => {
