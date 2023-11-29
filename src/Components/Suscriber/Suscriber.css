@@ -71,4 +71,12 @@
 @media screen and (max-width: 576px) {}
 
 /* Very small devices */
-@media screen and (max-width: 250px) {}
+@media screen and (max-width: 371px) {
+    .form input {
+    
+        width: 100%;
+    }
+    .form button {
+        width: 100%;
+    }
+}
