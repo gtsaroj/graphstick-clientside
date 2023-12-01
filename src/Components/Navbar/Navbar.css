@@ -137,7 +137,8 @@ li .link:hover::after {
   gap: 10px;
   right: -72px;
   top: 22px;
-  clip-path: polygon(0% 7%, 50% 0%, 93% 10%, 100% 100%, 0% 100%);  opacity: 0;
+  clip-path: polygon(0% 7%, 50% 0%, 93% 10%, 100% 100%, 0% 100%);
+  opacity: 0;
 }
 .dropdown li {
   width: 200px;
@@ -250,7 +251,7 @@ li .link:hover::after {
     .dropdown {
       right: 30px;
       top: -1px;
-  }
+    }
   }
   #header {
     padding: 23px 12px;
@@ -259,13 +260,19 @@ li .link:hover::after {
     margin: 0px;
     gap: 0px;
   }
+  .link4 {
+    right: 85px;
+
+    width: 13px;
+  }
 }
 
 /* Small devices */
 @media screen and (max-width: 576px) {
+ 
 }
 
 /* Very small devices */
 @media screen and (max-width: 378px) {
-
+ 
 }
