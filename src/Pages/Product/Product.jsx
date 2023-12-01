@@ -5,9 +5,9 @@ import { useParams } from "react-router-dom";
 import useFetch from "../../Hook/useFetch";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../CardReducer/CardReducer";
-import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import BalanceIcon from "@mui/icons-material/Balance";
+// import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+// import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+// import BalanceIcon from "@mui/icons-material/Balance";
 import { useAuthContext } from "../../Context/AuthContext";
 import { useNavigate } from "react-router-dom";
 import { message } from "antd";
@@ -197,16 +197,16 @@ const Product = () => {
             </div>
 
             <button className="add" onClick={handleAddToCart}>
-              <AddShoppingCartIcon />
+              {/* <AddShoppingCartIcon /> */}
             </button>
             <div className="link">
               <div className="item">
-                <FavoriteBorderIcon />
+                {/* <FavoriteBorderIcon /> */}
                 Add To <br /> WishList
               </div>
               <div className="item">
 
-                <BalanceIcon />
+                {/* <BalanceIcon /> */}
                 Add To <br /> COMPARE
               </div>
             </div>
