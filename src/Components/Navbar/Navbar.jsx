@@ -2,21 +2,21 @@ import React, { useState, useRef } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-// import WidgetsIcon from "@mui/icons-material/Widgets";
+import WidgetsIcon from "@mui/icons-material/Widgets";
 import { useEffect } from "react";
-// import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { CgWebsite } from "react-icons/cg";
 import { useNavigate } from "react-router-dom";
 import { useAuthContext } from "../../Context/AuthContext";
 import { removeToken } from "../../Helper";
-// import SettingsIcon from "@mui/icons-material/Settings";
-// import InventoryIcon from "@mui/icons-material/Inventory";
-// import FavoriteIcon from "@mui/icons-material/Favorite";
-// import ReviewsIcon from "@mui/icons-material/Reviews";
-// import LogoutIcon from "@mui/icons-material/Logout";
+import SettingsIcon from "@mui/icons-material/Settings";
+import InventoryIcon from "@mui/icons-material/Inventory";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import ReviewsIcon from "@mui/icons-material/Reviews";
+import LogoutIcon from "@mui/icons-material/Logout";
 import { message } from "antd";
-// import LoginIcon from '@mui/icons-material/Login';
-// import HowToRegIcon from '@mui/icons-material/HowToReg';
+import LoginIcon from '@mui/icons-material/Login';
+import HowToRegIcon from '@mui/icons-material/HowToReg';
 
 const Navbar = () => {
   const [menuVisible, setMenuVisible] = useState(false);
@@ -103,37 +103,37 @@ const Navbar = () => {
           <span>{products.length > 0 && products.length}</span>
         </li>
         <li className="accountHandle">
-          {/* <div className="account2"><AccountCircleIcon /> {user ? user.username : " "}</div> */}
+          <div className="account2"><AccountCircleIcon /> {user ? user.username : " "}</div>
           {user ? (
             <div className="profile">
               <div className="setting i">
                 <Link to={"/profile"} className="link2 i">
-                  {/* <SettingsIcon /> <span>Manage My account</span> */}
+                  <SettingsIcon /> <span>Manage My account</span>
                 </Link>
               </div>
               <div className="orders i">
-                {/* <InventoryIcon /> My orders */}
+                <InventoryIcon /> My orders
               </div>
               <div className="wishlist i">
-                {/* <FavoriteIcon /> <span>My Whishlist</span> */}
+                <FavoriteIcon /> <span>My Whishlist</span>
               </div>
               <div className="review i">
-                {/* <ReviewsIcon /> <span>My Review</span> */}
+                <ReviewsIcon /> <span>My Review</span>
               </div>
               <div className="logout i" onClick={handlelogout}>
-                {/* <LogoutIcon /> <span>Logout</span> */}
+                <LogoutIcon /> <span>Logout</span>
               </div>
             </div>
           ) : (
             <ul className="dropdown">
               <li>
                 <Link className="link1 i" to={"/signup"}>
-                {/* <HowToRegIcon/> Sign in  */}
+                <HowToRegIcon/> Sign in 
                 </Link>
               </li>
               <li>
                 <Link className="link1 i" to={"/login"}>
-                {/* <LoginIcon/> Login  */}
+                <LoginIcon/> Login 
                 </Link>
               </li>
             </ul>
@@ -147,7 +147,7 @@ const Navbar = () => {
         </Link>
         <span className="link4">{products.length > 0 && products.length}</span>
         <div className="div" onClick={handleMove}>
-          {/* <WidgetsIcon /> */}
+          <WidgetsIcon />
         </div>
       </div>
     </section>
