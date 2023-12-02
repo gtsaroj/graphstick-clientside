@@ -73,6 +73,28 @@ tfoot .subtotal {
   transform: scale(1.08);
   cursor: pointer;
 }
+.cart-item-enter {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.cart-item-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.cart-item-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cart-item-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 300ms, transform 300ms;
+}
+
 /* ============================BreakDown======================== */
 
 @media screen and (max-width: 778px) {

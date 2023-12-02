@@ -1,134 +1,105 @@
-import { React, useEffect, useState } from 'react'
-import "./Cart.css"
-import { useDispatch, useSelector } from 'react-redux'
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { removeItem } from '../../CardReducer/CardReducer';
-import ProductionQuantityLimitsIcon from '@mui/icons-material/ProductionQuantityLimits'
-import { Link, useNavigate } from "react-router-dom";
+import ProductionQuantityLimitsIcon from '@mui/icons-material/ProductionQuantityLimits';
+import { Link, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import DeleteIcon from '@mui/icons-material/Delete';
-
-
-
-
-
-
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import './Cart.css';
 
 const Cart = () => {
+  const navigate = useNavigate();
+  const [empty, setEmpty] = useState(true);
 
- const navigate = useNavigate()
- console.log(navigate)
+  const products = useSelector((state) => state.cart.products);
+  const dispatch = useDispatch();
 
-    const [empty, setEmpty] = useState(true);
-    const [checkout, setCheckout] = useState(false);
+  useEffect(() => {
+    setEmpty(products.length === 0);
+  }, [products]);
 
+  const total = () => {
+    let total = 0;
+    products.forEach((element) => {
+      total += element.price * element.quantity;
+    });
+    return total.toFixed(2);
+  };
 
+  const handleRemove = (itemId) => {
+    dispatch(removeItem(itemId));
+  };
 
-    // }
-
-
-    const products = useSelector(state => state.cart.products);
-    console.log(products)
-
-
-        function handleCheck() {
-
-            if(products?.length > 0){
-navigate('/checkout', {state: {products}})
-            }
-            else{
-                toast.error("please add to cart!")
-            }
-
-        }
-
-
-
-    useEffect(() => {
-        if (products.length === 0) {
-            setEmpty(true)
-        }
-        else {
-            setEmpty(false)
-        }
-    }, [products])
-
-
-
-    const total = () => {
-        let total = 0;
-        products.forEach(element => {
-            total += element.price * element.quantity;
-
-        });
-        return total.toFixed(2)
-
+  const handleCheck = () => {
+    if (products?.length > 0) {
+      navigate('/checkout', { state: { products } });
+    } else {
+      toast.error('Please add items to the cart!');
     }
+  };
 
-
-    const dispatch = useDispatch()
-
-    function handleRemove(itemId) {
-        dispatch(removeItem(itemId))
-    }
-
-
-
-    return (<>
-        <section className="cart">
-            <div className="Cart-items" >
-                <table>
-                    <thead>
-                        <tr>
-                            <td>Remove</td>
-                            <td>Image</td>
-                            <td>Price</td>
-                            <td>Quantity</td>
-                            <td>SubTotal</td>
-                        </tr>
-                    </thead>
-                    {empty ?
-                        <div className="emptyCart">
-                            <ProductionQuantityLimitsIcon className='cartIcons' style={{ fontSize: "7rem" }} />
-                            <p>Your Cart is empty</p>
-                        </div>
-
-                        : products?.map((item) => (
-                            <tbody>
-
-                                <tr className='cart-container' key={item.id}  >
-                                    <td onClick={() => handleRemove(item.id)} className='removeButton'><DeleteIcon/></td>
-                                    <td ><img src={item.img} alt="" /></td>
-                                    <td>{item.price}</td>
-                                    <td> <span>{item.quantity}×{item.price}</span></td>
-                                    <td>{item.price * item.quantity}</td>
-                                </tr>
-
-                            </tbody>
-                        ))
-                    }
-                    <tfoot>
-                        <tr className="subtotal">
-                            <td>Subtotal:  </td>
-                            <td>{total()}</td>
-                            {
- <Link  state={{ products }} className='link'  onClick={handleCheck}> <td>Proceed to checkout</td></Link>
-                            }
-                           
-                        </tr>
-                        <ToastContainer />
-                    </tfoot>
-
-
-
-                </table>
-            </div>
-
-        </section>
+  return (
+    <>
+      <section className="cart">
+        <div className="Cart-items">
+          <table>
+            <thead>
+              <tr>
+                <td>Remove</td>
+                <td>Image</td>
+                <td>Price</td>
+                <td>Quantity</td>
+                <td>SubTotal</td>
+              </tr>
+            </thead>
+            
+              {empty ? (
+                <tr>
+                  <td colSpan="5" className="emptyCart">
+                    <ProductionQuantityLimitsIcon className="cartIcons" style={{ fontSize: '7rem' }} />
+                    <p>Your Cart is empty</p>
+                  </td>
+                </tr>
+              ) : (
+                products?.map((item) => (
+                  <CSSTransition key={item.id} timeout={300} classNames="cart-item">
+                    <tr className="cart-container">
+                      <td onClick={() => handleRemove(item.id)} className="removeButton">
+                        <DeleteIcon />
+                      </td>
+                      <td>
+                        <img src={item.img} alt="" />
+                      </td>
+                      <td>{item.price}</td>
+                      <td>
+                        <span>
+                          {item.quantity}×{item.price}
+                        </span>
+                      </td>
+                      <td>{item.price * item.quantity}</td>
+                    </tr>
+                  </CSSTransition>
+                ))
+              )}
+         
+            <tfoot>
+              <tr className="subtotal">
+                <td>Subtotal: </td>
+                <td>{total()}</td>
+                <td>
+                  <Link state={{ products }} className="link" onClick={handleCheck}>
+                    Proceed to checkout
+                  </Link>
+                </td>
+              </tr>
+              <ToastContainer />
+            </tfoot>
+          </table>
+        </div>
+      </section>
     </>
+  );
+};
 
-    );
-}
-    ;
-
-
-export default Cart
+export default Cart;
