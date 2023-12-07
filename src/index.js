@@ -13,7 +13,7 @@ ReactDOM.createRoot(root).render(
     <AuthProvider>
       <Provider store={store}>
         <PersistGate loading={"Loading"} persistor={persistor}>
-          <App />
+       <App/>
         </PersistGate>
       </Provider>
     </AuthProvider>
