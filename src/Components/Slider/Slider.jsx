@@ -24,7 +24,7 @@ const Slider = () => {
           modules={[Navigation, Pagination, Mousewheel, Keyboard]}
           className="mySwiper"
          style={{
-          zIndex: '-1'
+        
          }}>
           <SwiperSlide className="swiper">
             <img
