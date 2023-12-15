@@ -1,140 +1,140 @@
 #hero {
-    /* background-position: center; */
+  /* background-position: center; */
 
-
-    background-image: url("../features/bgg.avif");
-    background-size: cover;
-    height: 50vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-items: flex-start;
-    justify-content: center;
+  background-image: url("../features/bgg.avif");
+  background-size: cover;
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-items: flex-start;
+  justify-content: center;
 }
 
-
 #content {
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
-    padding: 0px 0px 0px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  padding: 0px 0px 0px 10px;
 }
 
 #hero h4 {
-    padding-bottom: 5px;
-    font-family: 'baloo';
-    color: rgb(220, 31, 31);
+  padding-bottom: 5px;
+  font-family: "baloo";
+  color: rgb(220, 31, 31);
 }
 
 h2 {
-    font-family: 'baloo';
+  font-family: "baloo";
 }
 
 #hero h1 {
-    font-family: "baloo";
-    color: #088178;
+  font-family: "baloo";
+  color: #088178;
 }
 
 #page {
-    text-align: start;
-    font-family: 'baloo';
+  text-align: start;
+  font-family: "baloo";
 }
 
-
 #hero button {
-    cursor: pointer;
-    border: 1px solid rgb(167, 193, 171);
-    width: 100px;
-    font-family: 'baloo';
-    padding: 9px 8px 6px 8px;
-    border-radius: 5px;
-    color: #088178;
-    background-color: #fddde4;
-    transition: 0.2s ease;
+  cursor: pointer;
+  border: 1px solid rgb(167, 193, 171);
+  width: 100px;
+  font-family: "baloo";
+  padding: 9px 8px 6px 8px;
+  border-radius: 5px;
+  color: #088178;
+  background-color: #fddde4;
+  transition: 0.2s ease;
 }
 
 #hero button:hover {
-    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.2);
+  box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.2);
 }
 
-.swiper{
-    width: 100%;
-    height: 100%;
-    border-radius: 8px;
-    padding: 5px 8px;
-    margin: 3px 4px 0px 4px;
+.swiper {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  padding: 5px 8px;
+  margin: 3px 4px 0px 4px;
+}
 
-   
-}
-.mySwiper{
-    z-index:  -1;
-}
-img{
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
+img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
 }
 
 /*=========================BreakPoint===================== */
 
 /* Medium screen */
 @media screen and (max-width: 768px) {
-    #hero {
-        height: 41vh;
-        width: 100%;
-    }
+  #hero {
+    height: 41vh;
+    width: 100%;
+  }
 
-    h2 {
-        font-size: 13px;
-    }
+  h2 {
+    font-size: 13px;
+  }
 
-    #page {
-        font-size: 13px;
-    }
-
+  #page {
+    font-size: 13px;
+  }
+  img {
+    height: 350px;
+  }
 }
 
 /* Small devices */
 @media screen and (max-width: 576px) {
-    #hero {
-        height: 28vh;
-        width: 100%;
-    }
+  #hero {
+    height: 28vh;
+    width: 100%;
+  }
 
-    #hero button {
-        font-size: 10px;
-        padding: 5px 9px 5px 9px;
-        width: 75px;
+  #hero button {
+    font-size: 10px;
+    padding: 5px 9px 5px 9px;
+    width: 75px;
+  }
 
-    }
+  #hero h1 {
+    font-size: 12px;
+  }
 
-    #hero h1 {
-        font-size: 12px;
-    }
+  #hero h2 {
+    font-size: 15px;
+  }
 
-    #hero h2 {
-        font-size: 15px;
-    }
-
-    #page {
-        font-size: 12px;
-    }
+  #page {
+    font-size: 12px;
+  }
+  img {
+    height: 300px;
+  }
+  
 }
 
 /* Very small devices */
 @media screen and (max-width: 378px) {
-    #hero {
-        height: 23vh;
-        width: 100%;
-
-    }
+  #hero {
+    height: 23vh;
+    width: 100%;
+  }
+  img {
+    height: 172px;
+  }
+ 
 }
 
 /* very very smal devices */
 @media screen and (max-width: 278px) {
-    #hero {
-        height: 18vh;
-        width: 100%;
-    }
-
+  #hero {
+    height: 18vh;
+    width: 100%;
+  }
 }
