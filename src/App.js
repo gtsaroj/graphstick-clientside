@@ -76,6 +76,13 @@ function App() {
         <Offer/>
         <Footer/>
         </>} />
+        <Route path="/checkout" element={
+          <>
+          <Navbar/>
+          <CheckOutPage/>
+          <Footer/>
+          </>
+        }/>
       </Routes>
     </Router>
   );
