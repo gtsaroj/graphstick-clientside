@@ -77,7 +77,7 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link className="link" to={"/Products/:id"}>
+          <Link className="link" to={"/Products/id"}>
             Products
           </Link>
         </li>

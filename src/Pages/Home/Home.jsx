@@ -10,14 +10,13 @@ import Footer from "../../Components/Footer/Footer";
 const Home = () => {
   return (
     <div className="Home">
-      <Navbar />
       <Slider />
       <Featured />
       <FeaturedProduct type={"featured"} />
       <CrazyDeal />
       <Suscriber />
       <FeaturedProduct type={"trending"} />
-      <Footer />
+     
     </div>
   );
 };

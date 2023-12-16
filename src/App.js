@@ -1,5 +1,12 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Outlet, // Import the Routes component
+
+} from "react-router-dom";
+import "./App.css"
+import Navbar from "./Components/Navbar/Navbar";
 import Home from "./Pages/Home/Home";
 import Footer from "./Components/Footer/Footer";
 import Product from "./Pages/Product/Product";
@@ -13,79 +20,88 @@ import Signup from "./Authenticator/Signup/Signup";
 import Login from "./Authenticator/Login/Login";
 import Profile from "./Profile/Profile";
 import Offer from "./Pages/Offer/Offer";
-import Navbar from "./Components/Navbar/Navbar";
+const Layout = () => {
+  return (
+    <div className="homePage">
+
+      <Navbar />
+      <Outlet />
+      <Footer />
+    </div>
+
+  )
+}
+
 
 function App() {
+
+
+
+
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <Layout />,
+      children: [
+        {
+          path: "products/:id",
+          element: <Products />
+        },
+        {
+          path: "product/:id",
+          element: <Product />
+        },
+        {
+          path: "/",
+          element: <Home />
+        },
+        {
+          path: "about",
+          element: <About />
+        },
+        {
+          path: "blog",
+          element: <BlogPage />
+        },
+        {
+          path: "contact",
+          element: <Contact />
+        },
+        {
+          path: "cart",
+          element: <Cart />
+        },
+        {
+          path: "/checkout",
+          element: <CheckOutPage />
+        },
+        {
+          path: '/signup',
+          element: <Signup/>
+        },
+        {
+          path: "/login",
+          element: <Login/>
+        },
+        {
+          path: "/profile",
+          element: <Profile/>
+        },
+        {
+          path: "/offer/",
+          element: <Offer/>
+        }
+
+      ]
+    }
+
+  ])
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/products/:id" element={<>
-        <Navbar/>
-        <Products/>
-        <Footer/>
-        </>
-        } />
-        <Route path="/product/:id" element={<>
-        <Navbar/>
-        <Product/>
-        <Footer/>
-        </>} />
-        <Route path="/about" element={<>
-        <Navbar/>
-        <About/>
-        <Footer/>
-        </>} />
-        <Route path="/blog" element={<>
-        <Navbar/>
-        <BlogPage/>
-        <Footer/>
-        </>} />
-        <Route path="/contact" element={<>
-        <Navbar/>
-        <Contact/>
-        <Footer/>
-        </>} />
-        <Route path="/cart" element={<>
-        <Navbar/>
-        <Cart/>
-        <Footer/>
-        </>} />
-        <Route path="/checkout" element={<>
-        <Navbar/>
-        <CheckOutPage/>
-        <Footer/>
-        </>} />
-        <Route path="/signup" element={<>
-        <Navbar/>
-        <Signup/>
-        <Footer/>
-        </>} />
-        <Route path="/login" element={<>
-        <Navbar/>
-        <Login/>
-        <Footer/>
-        </>} />
-        <Route path="/profile" element={<>
-        <Navbar/>
-        <Profile/>
-        <Footer/>
-        </>} />
-        <Route path="/offer/:id" element={<>
-        <Navbar/>
-        <Offer/>
-        <Footer/>
-        </>} />
-        <Route path="/checkout" element={
-          <>
-          <Navbar/>
-          <CheckOutPage/>
-          <Footer/>
-          </>
-        }/>
-      </Routes>
-    </Router>
-  );
+
+
+    <RouterProvider router={router} />
+
+  )
 }
 
 export default App;
