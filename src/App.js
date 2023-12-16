@@ -88,7 +88,7 @@ function App() {
           element: <Profile/>
         },
         {
-          path: "/offer/",
+          path: "/offer/:id",
           element: <Offer/>
         }
 

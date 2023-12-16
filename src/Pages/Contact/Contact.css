@@ -158,9 +158,9 @@ form {
     }
 
     #form-details form textarea {
-        width: 93%;
-    height: 100px;
-    border-radius: 12px;
+        border-radius: 12px;
+        height: 100px;
+        width: 358px;
     }
 
     form {
@@ -177,7 +177,7 @@ form {
     }
 
     #form-details form button {
-        width: 93%;
+        width: 358px;
         padding: 8px 0px 8px 0px;
     }
 
