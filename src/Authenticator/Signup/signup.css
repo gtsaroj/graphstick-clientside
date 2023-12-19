@@ -1,0 +1,56 @@
+.button {
+  background-color: black;
+  width: 376px;
+}
+.input {
+  width: 376px;
+}
+.sign {
+  background-color: rgb(25, 27, 27);
+  height: 520px;
+  width: 100%;
+}
+.box {
+  background-color: #3a4249;
+  border: none;
+}
+.placeholder {
+  color: rgb(0, 0, 0);
+}
+
+/* breakdown================================ */
+
+@media screen and (max-width: 1150px) {
+  .input {
+    width: 300px;
+  }
+  .button {
+    background-color: black;
+    width: 300px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .input {
+    width: 300px;
+  }
+  .button {
+    background-color: black;
+    width: 300px;
+  }
+  .box {
+    width: 500px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 556px) {
+  .input {
+    width: 250px;
+  }
+  .button {
+    background-color: black;
+    width: 250px;
+  }
+  .box {
+    width: 300px;
+  }
+}

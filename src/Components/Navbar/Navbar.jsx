@@ -15,9 +15,9 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import ReviewsIcon from "@mui/icons-material/Reviews";
 import LogoutIcon from "@mui/icons-material/Logout";
 import { message } from "antd";
-import LoginIcon from '@mui/icons-material/Login';
-import HowToRegIcon from '@mui/icons-material/HowToReg';
-
+import LoginIcon from "@mui/icons-material/Login";
+import HowToRegIcon from "@mui/icons-material/HowToReg";
+import { persistor } from "../../CardReducer/store";
 const Navbar = () => {
   const [menuVisible, setMenuVisible] = useState(false);
   const menuRef = useRef(null);
@@ -58,7 +58,7 @@ const Navbar = () => {
     navigate("/login", { replace: true });
     message.success(`logout`);
     window.location.reload();
-    
+    persistor.purge();
   };
 
   return (
@@ -103,7 +103,9 @@ const Navbar = () => {
           <span>{products.length > 0 && products.length}</span>
         </li>
         <li className="accountHandle">
-          <div className="account2"><AccountCircleIcon /> {user ? user.username : " "}</div>
+          <div className="account2">
+            <AccountCircleIcon /> {user ? user.username : " "}
+          </div>
           {user ? (
             <div className="profile">
               <div className="setting i">
@@ -126,14 +128,15 @@ const Navbar = () => {
             </div>
           ) : (
             <ul className="dropdown">
+              <div className="boxdiv"></div>
               <li>
                 <Link className="link1 i" to={"/signup"}>
-                <HowToRegIcon/> Sign in 
+                  <HowToRegIcon /> Sign in
                 </Link>
               </li>
               <li>
                 <Link className="link1 i" to={"/login"}>
-                <LoginIcon/> Login 
+                  <LoginIcon /> Login
                 </Link>
               </li>
             </ul>

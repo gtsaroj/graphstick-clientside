@@ -18,6 +18,7 @@ import { setToken } from "../../Helper";
 import { useAuthContext } from "../../Context/AuthContext";
 import useScreenSize from "../../UseScreenSize";
 import { API } from "../../Constant";
+import "./signup.css"
 
 const SignUp = () => {
   const { isDesktopView } = useScreenSize();
@@ -63,10 +64,10 @@ const SignUp = () => {
   };
 
   return (
-    <Fragment>
-      <Row align="middle">
+    <Fragment className="signup">
+      <Row align="middle" className="sign">
         <Col span={isDesktopView ? 8 : 24} offset={isDesktopView ? 8 : 0}>
-          <Card title="SignUp">
+          <Card title="SignUp" className="box">
             {error ? (
               <Alert
                 className="alert_error"
@@ -91,8 +92,8 @@ const SignUp = () => {
                     type: "string",
                   },
                 ]}
-              >
-                <Input placeholder="Username" />
+             className="input" >
+                <Input placeholder="Username" className="placeholder"/>
               </Form.Item>
               <Form.Item
                 label="Email"
@@ -103,30 +104,30 @@ const SignUp = () => {
                     type: "email",
                   },
                 ]}
-              >
-                <Input placeholder="Email address" />
+             className="input" >
+                <Input placeholder="Email address" className="placeholder"/>
               </Form.Item>
 
               <Form.Item
                 label="Password"
                 name="password"
                 rules={[{ required: true }]}
-              >
-                <Input.Password placeholder="Password" />
+             className="input" >
+                <Input.Password placeholder="Password" className="placeholder"/>
               </Form.Item>
 
               <Form.Item>
                 <Button
                   type="primary"
                   htmlType="submit"
-                  className="login_submit_btn"
+                  className="button"
                 >
                   Submit {isLoading && <Spin size="small" />}
                 </Button>
               </Form.Item>
             </Form>
             <Typography.Paragraph className="form_help_text">
-              Already have an account? <Link to="/login">Sign In</Link>
+              Already have an account? <Link to="/login">Log in</Link>
             </Typography.Paragraph>
           </Card>
         </Col>

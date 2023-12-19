@@ -65,11 +65,12 @@ const SignIn = () => {
     }
   };
 
-  return (
-    <Fragment>
-      <Row align="middle">
+
+return (
+    <Fragment className="signup">
+      <Row align="middle" className="sign">
         <Col span={isDesktopView ? 8 : 24} offset={isDesktopView ? 8 : 0}>
-          <Card title="SignIn">
+          <Card title="SignUp" className="box">
             {error ? (
               <Alert
                 className="alert_error"
@@ -94,30 +95,30 @@ const SignIn = () => {
                     type: "email",
                   },
                 ]}
-              >
-                <Input placeholder="Email address" />
+             className="input" >
+                <Input placeholder="Email address" className="placeholder"/>
               </Form.Item>
 
               <Form.Item
                 label="Password"
                 name="password"
                 rules={[{ required: true }]}
-              >
-                <Input.Password placeholder="Password" />
+             className="input" >
+                <Input.Password placeholder="Password" className="placeholder"/>
               </Form.Item>
 
               <Form.Item>
                 <Button
                   type="primary"
                   htmlType="submit"
-                  className="login_submit_btn"
+                  className="button"
                 >
-                  Login {isLoading && <Spin size="small" />}
+                  Submit {isLoading && <Spin size="small" />}
                 </Button>
               </Form.Item>
             </Form>
             <Typography.Paragraph className="form_help_text">
-              Not have an Account? <Link to="/signup">Sign Up</Link>
+              Not have an Account? <Link to="/signup">Sign In</Link>
             </Typography.Paragraph>
           </Card>
         </Col>

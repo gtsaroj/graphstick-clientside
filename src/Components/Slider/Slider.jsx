@@ -35,7 +35,7 @@ const Slider = () => {
   
           <SwiperSlide className="swiper">
             <img
-              src="https://media.licdn.com/dms/image/D5612AQHyHk53qnurYQ/article-cover_image-shrink_720_1280/0/1699099415077?e=2147483647&v=beta&t=6wxCocTcq48YJ6xt6NqI7LjvcNZDgExueNDqORcXmKA"
+              src="https://cdn.pixabay.com/photo/2023/04/14/09/03/shopping-street-7924559_1280.jpg"
               alt=""
             />
           </SwiperSlide>

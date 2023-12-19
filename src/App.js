@@ -12,7 +12,7 @@ import Footer from "./Components/Footer/Footer";
 import Product from "./Pages/Product/Product";
 import Products from "./Pages/Products/Products";
 import About from "./Pages/About/About";
-import BlogPage from "./Components/BlogPage/BlogPage";
+import Blog from "./Pages/Blog/Blog";
 import Contact from "./Pages/Contact/Contact";
 import Cart from "./Components/Cart/Cart";
 import CheckOutPage from "./Components/CheckOut Page/CheckOutPage";
@@ -60,8 +60,8 @@ function App() {
           element: <About />
         },
         {
-          path: "blog",
-          element: <BlogPage />
+          path: "/blog",
+          element: <Blog />
         },
         {
           path: "contact",
