@@ -70,7 +70,7 @@ const CrazyDeal = () => {
 
                   <span>{item?.attributes.desc}</span>
 
-                  <button onClick={() => handleClick(item)}>Shop now</button>
+                  <button onClick={() => handleClick(item)} className='font-ubuntu text-[14px] text-white font-bold bg-gray-900 hover:bg-gray-800 w-[150px] py-[10px] px-[7px] rounded-sm'>Shop now</button>
                   <Timer endTime={endTime.getTime()} onTimerEnd={handleTimerEnd} />
                 </div>
               </div>

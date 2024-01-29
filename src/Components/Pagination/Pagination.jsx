@@ -9,10 +9,10 @@ const Pagination = ({ totalItems, itemsPerPage, currentPage, onPageChange }) => 
   }
 
   return (
-    <ul className="pagination">
+    <ul className="pagination flex gap-[5px]" >
       {pageNumbers.map((number) => (
-        <li key={number} className={`page-item ${number === currentPage ? 'active' : ''}`}>
-          <button className="page-link" onClick={() => onPageChange(number)}>
+        <li key={number} className={` bg-gray-900 text-white rounded-sm  ${number === currentPage ? 'active' : ''} `}>
+          <button className="py-[6px] px-[7px] rounded-sm " onClick={() => onPageChange(number)}>
             {number}
           </button>
         </li>
@@ -22,3 +22,4 @@ const Pagination = ({ totalItems, itemsPerPage, currentPage, onPageChange }) => 
 };
 
 export default Pagination;
+ 

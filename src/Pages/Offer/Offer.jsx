@@ -188,9 +188,9 @@ const Offer = () => {
             </div>
           </div>
           <div className="right">
-            <h1>{productData?.attributes?.title}</h1>
-            <span className="price">{productData?.attributes?.price}</span>
-            <p>{productData?.attributes?.newprice}</p>
+            <h1> {data?.attributes?.title}</h1>
+            <span className="price">Rs. {data?.attributes?.price}</span>
+            <p>{data?.attributes?.specification}</p>
             <div className="quantity">
               <button onClick={() => setquantity((prev) => prev + 1)}>+</button>
               <h3>{quantity}</h3>
@@ -204,30 +204,42 @@ const Offer = () => {
             </div>
 
             <button className="add" onClick={handleAddToCart}>
-              <AddShoppingCartIcon />
+            <lord-icon
+    src="https://cdn.lordicon.com/pbrgppbb.json"
+    trigger="click"
+    >
+</lord-icon>
             </button>
             <div className="link">
-              <div className="item">
-                <FavoriteBorderIcon />
-                Add To <br /> WishList
+              <div className="item  flex-col items-center">
+                <lord-icon
+                  src="https://cdn.lordicon.com/ulnswmkk.json"
+                  trigger="click"
+                    ></lord-icon>
+                    <span className="flex flex-col items-start text-[13px] font-bold"> Add To <span>WishList</span> </span>
+               
               </div>
-              <div className="item">
-                {" "}
-                <BalanceIcon />
-                Add To <br /> COMPARE
+              <div className="item  flex items-center  ">
+        
+                    <lord-icon
+                  src="https://cdn.lordicon.com/qnpnzlkk.json"
+                  trigger="click"
+                ></lord-icon>
+           
+                <span className="flex flex-col items-start text-[13px] font-bold">Add To <span>COMPARE</span> </span>
               </div>
             </div>
             <div className="info">
               <span>vendor: Polo</span>
-              <span>Product Type: {productData?.attributes?.title}</span>
+              <span>Product Type: {data?.attributes?.title}</span>
               <span>Tag: T-shirt, Women, Top</span>
             </div>
             <div className="infos">
-              <span>Description: {productData?.attributes?.desc}</span>
-              <hr />
-              <span>Additional Information</span>
-              <hr />
-              <span>FAQ</span>
+              <span className="border-b-[1px]">Description: {data?.attributes?.desc}</span>
+              
+              <span className="border-b-[1px]">Additional Information</span>
+              
+              <span className="border-b-[1px]">FAQ</span>
             </div>
           </div>
         </div>

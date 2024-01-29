@@ -1,10 +1,11 @@
 /*=========================BreakPoint===================== */
 
 
-* {
+body {
   margin: 0px;
-  padding: 0%;
+  padding: 0px;
 }
+
 
 /* Medium screen */
 @media screen and (max-width: 768px) {}

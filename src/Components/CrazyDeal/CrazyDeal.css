@@ -32,21 +32,7 @@
   text-decoration: line-through;
   color: rgb(128, 128, 128);
 }
-.deal button {
-  padding: 5px 7px;
-  background-color: black;
-  color: white;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  border: none;
-  border-radius: 4px;
-  width: 100px;
-  padding: 10px 14px;
-  transition: 0.3s ease-in-out;
-}
-.deal button:hover {
-  color: rgb(142, 143, 143);
-  cursor: pointer;
-}
+
 .figure {
   width: (350px, 550px);
   height: (300px, 500px);

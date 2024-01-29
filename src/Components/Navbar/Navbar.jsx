@@ -18,6 +18,8 @@ import { message } from "antd";
 import LoginIcon from "@mui/icons-material/Login";
 import HowToRegIcon from "@mui/icons-material/HowToReg";
 import { persistor } from "../../CardReducer/store";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+
 const Navbar = () => {
   const [menuVisible, setMenuVisible] = useState(false);
   const menuRef = useRef(null);
@@ -82,12 +84,12 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link className="link" to={"/blog"}>
+          <Link className="link font-ubuntu" to={"/blog"}>
             Blog
           </Link>
         </li>
         <li>
-          <Link className="link" to={"/about"}>
+          <Link className="link " to={"/about"}>
             About
           </Link>
         </li>
@@ -96,13 +98,14 @@ const Navbar = () => {
             Contact
           </Link>
         </li>
+       
         <li id="secondpara">
           <Link className="link" to="/cart">
             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
           </Link>
           <span>{products.length > 0 && products.length}</span>
         </li>
-        <li className="accountHandle">
+        <li className="accountHandle invisible sm:visible">
           <div className="account2">
             <AccountCircleIcon /> {user ? user.username : " "}
           </div>
@@ -110,7 +113,7 @@ const Navbar = () => {
             <div className="profile">
               <div className="setting i">
                 <Link to={"/profile"} className="link2 i">
-                  <SettingsIcon /> <span>Manage My account</span>
+                  <SettingsIcon /> <span className=" ">Manage My account</span>
                 </Link>
               </div>
               <div className="orders i">
@@ -148,7 +151,48 @@ const Navbar = () => {
         <Link className="link link3" to={"/cart"}>
           <i class="fa fa-shopping-cart" aria-hidden="true"></i>
         </Link>
-        <span className="link4">{products.length > 0 && products.length}</span>
+        <span className="absolute top-[12px] right-[165px]  ">{products.length > 0 && products.length}</span>
+        <li className="accountHandle sm:invisible">
+          <div className="account2">
+            <AccountCircleIcon /> {user ? user.username : " "}
+          </div>
+          {user ? (
+            <div className="profile">
+              <div className="setting i">
+                <Link to={"/profile"} className="link2 i">
+                  <SettingsIcon /> <span className=" ">Manage My account</span>
+                </Link>
+              </div>
+              <div className="orders i">
+                <InventoryIcon /> My orders
+              </div>
+              <div className="wishlist i">
+                <FavoriteIcon /> <span>My Whishlist</span>
+              </div>
+              <div className="review i">
+                <ReviewsIcon /> <span>My Review</span>
+              </div>
+              <div className="logout i" onClick={handlelogout}>
+                <LogoutIcon /> <span>Logout</span>
+              </div>
+            </div>
+          ) : (
+            <ul className="dropdown">
+              <div className="boxdiv"></div>
+              <li>
+                <Link className="link1 i" to={"/signup"}>
+                  <HowToRegIcon /> Sign in
+                </Link>
+              </li>
+              <li>
+                <Link className="link1 i" to={"/login"}>
+                  <LoginIcon /> Login
+                </Link>
+              </li>
+            </ul>
+          )}
+        </li>
+     
         <div className="div" onClick={handleMove}>
           <WidgetsIcon />
         </div>

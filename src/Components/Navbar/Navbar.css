@@ -219,6 +219,9 @@ li .link:hover::after {
 
 /* Medium screen */
 @media screen and (max-width: 768px) {
+  #navbar .accountHandle{
+    display: none;
+  }
   #navbar {
     display: flex;
     flex-direction: column;
@@ -247,7 +250,7 @@ li .link:hover::after {
   .mobile {
     display: flex;
     flex-direction: row;
-    gap: 3rem;
+    gap: 7px;
   }
 
   .mobile .link {
@@ -283,6 +286,9 @@ li .link:hover::after {
     right: 85px;
 
     width: 13px;
+  }
+  .mobile .accountHandle{
+    visibility: visible;
   }
 }
 

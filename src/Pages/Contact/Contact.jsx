@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/iframe-has-title */
 import React, { useRef, useState } from 'react';
 import emailjs from "@emailjs/browser";
 import "./Contact.css";
@@ -77,11 +78,13 @@ const Contact = () => {
 
     </section>
            
-            <section id="form-details">
-                <div id="form">
-                    <form ref={form} onSubmit={sendEmail}>
-                        <span>Leave A MESSAGE</span>
+            <section className="form-details">
+            <span>Leave A MESSAGE</span>
                         <h2>We love to hear from you</h2>
+                <div className="form">
+
+                    <form ref={form} onSubmit={sendEmail}>
+          
                         <input type="text" placeholder="Enter your Name" name='from_name' />
                         <input type="email" placeholder="E-mail" name='from_email' />
                         <input type="text" placeholder="Subject" name='from_subject' />

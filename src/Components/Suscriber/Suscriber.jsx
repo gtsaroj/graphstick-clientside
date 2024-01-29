@@ -40,9 +40,9 @@ const Suscriber = () => {
                 <h2>Sign Up For Newsletters</h2>
                 <p>Get E-mail updates about our latest shop and <span>special offers</span></p>
             </div>
-            <form className="form" ref={form} onSubmit={sendEmail}>
-                <input type="email" placeholder="Your email address"  name="message"  />
-                <button type="submit" disabled={loading}> {loading ? "Loading..." : "Submit"}</button>
+            <form className="form flex gap-0 flex-wrap" ref={form} onSubmit={sendEmail}>
+                <input type="email" placeholder="Your email address"  name="message"   className='py-[10px] px-[7px] w-full rounded-none sm:w-[220px]'/>
+                <button className='outline-none rounded-none bg-blue-500 py-[10px] sm:w-[100px] w-full border-r-[0px]' type="submit" disabled={loading}> {loading ? "Loading..." : "Submit"}</button>
             </form>
             <ToastContainer position="top-right" autoClose={5000} /> {/* Position and autoClose settings */}
               

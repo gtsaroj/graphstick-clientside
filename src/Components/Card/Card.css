@@ -1,7 +1,4 @@
-* {
-    padding: 0%;
-    margin: 0;
-}
+
 
 
 
@@ -19,10 +16,11 @@
    
 }
 
-#product1 .pro img {
+.pro img {
     width: 100%;    
     border-radius: 2px;
     height: 145px;
+
 }
 
 #product1 .pro:hover {
@@ -35,11 +33,7 @@
     padding: 1px 0px;
 }
 
-#product1 .pro .description span {
-    color: #606063;
-    font-size: 12px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+
 
 #product1 .pro .description h5 {
     padding-top: 7px;
