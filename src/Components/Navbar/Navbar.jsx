@@ -5,7 +5,6 @@ import { useSelector } from "react-redux";
 import WidgetsIcon from "@mui/icons-material/Widgets";
 import { useEffect } from "react";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import { CgWebsite } from "react-icons/cg";
 import { useNavigate } from "react-router-dom";
 import { useAuthContext } from "../../Context/AuthContext";
 import { removeToken } from "../../Helper";
@@ -18,7 +17,7 @@ import { message } from "antd";
 import LoginIcon from "@mui/icons-material/Login";
 import HowToRegIcon from "@mui/icons-material/HowToReg";
 import { persistor } from "../../CardReducer/store";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import { Heart } from 'lucide-react';
 
 const Navbar = () => {
   const [menuVisible, setMenuVisible] = useState(false);
@@ -50,7 +49,9 @@ const Navbar = () => {
     setMenuVisible(true);
   }
 
+
   const products = useSelector((state) => state.cart.products);
+  const favourite = useSelector((state)=> state?.favourite?.love)
 
   const { user } = useAuthContext();
   const navigate = useNavigate();
@@ -72,6 +73,7 @@ const Navbar = () => {
         id="navbar"
         ref={menuRef}
         style={{ right: menuVisible ? "0px" : "-250px" }}
+        className="top-[73px]"
       >
         <li>
           <Link className="link" to={"/"}>
@@ -98,7 +100,10 @@ const Navbar = () => {
             Contact
           </Link>
         </li>
-       
+        <li className="link cursor-pointer sm:visible invisible">
+          <Heart />
+          <span>{favourite?.length > 0 ? favourite?.length : ""}</span>
+       </li>
         <li id="secondpara">
           <Link className="link" to="/cart">
             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
@@ -148,10 +153,14 @@ const Navbar = () => {
       </ul>
 
       <div className="mobile">
+        <li>
+        <Heart/>
+        </li>
         <Link className="link link3" to={"/cart"}>
           <i class="fa fa-shopping-cart" aria-hidden="true"></i>
         </Link>
-        <span className="absolute top-[12px] right-[165px]  ">{products.length > 0 && products.length}</span>
+        <span className={`absolute top-[13px] right-[172px] bg-red-500 rounded-full  text-center text-[13px] font-ubuntu w-[17px] h-[17px] ${products?.length > 0 ? "visible" : "invisible"}`}>{products?.length > 0 ? products.length : null}</span>
+
         <li className="accountHandle sm:invisible">
           <div className="account2">
             <AccountCircleIcon /> {user ? user.username : " "}
@@ -192,6 +201,7 @@ const Navbar = () => {
             </ul>
           )}
         </li>
+     
      
         <div className="div" onClick={handleMove}>
           <WidgetsIcon />

@@ -17,6 +17,7 @@ import { useAuthContext } from "../../Context/AuthContext";
 import useScreenSize from "../../UseScreenSize";
 import { API } from "../../Constant";
 import { setToken } from "../../Helper";
+import axios from "axios";
 
 const SignIn = () => {
   const { isDesktopView } = useScreenSize();
@@ -59,15 +60,15 @@ const SignIn = () => {
       }
     } catch (error) {
       console.error(error);
-      setError(error?.message ?? "Something went wrong!");
+      setError(error?.message  + JSON.stringify(values));
     } finally {
       setIsLoading(false);
     }
   };
 
-
-return (
-    <Fragment className="signup">
+  return (
+    <Fragment>
+      <div className="signup">
       <Row align="middle" className="sign">
         <Col span={isDesktopView ? 8 : 24} offset={isDesktopView ? 8 : 0}>
           <Card title="SignUp" className="box">
@@ -95,24 +96,25 @@ return (
                     type: "email",
                   },
                 ]}
-             className="input" >
-                <Input placeholder="Email address" className="placeholder"/>
+                className="input"
+              >
+                <Input placeholder="Email address" className="placeholder" />
               </Form.Item>
 
               <Form.Item
                 label="Password"
                 name="password"
                 rules={[{ required: true }]}
-             className="input" >
-                <Input.Password placeholder="Password" className="placeholder"/>
+                className="input"
+              >
+                <Input.Password
+                  placeholder="Password"
+                  className="placeholder"
+                />
               </Form.Item>
 
               <Form.Item>
-                <Button
-                  type="primary"
-                  htmlType="submit"
-                  className="button"
-                >
+                <Button type="primary" htmlType="submit" className="button  bg-gray-900 text-white rounded-sm hover:bg-blue-500 ">
                   Submit {isLoading && <Spin size="small" />}
                 </Button>
               </Form.Item>
@@ -122,7 +124,8 @@ return (
             </Typography.Paragraph>
           </Card>
         </Col>
-      </Row>
+        </Row>
+        </div>
     </Fragment>
   );
 };

@@ -30,16 +30,16 @@ const Timer = ({ endTime, onTimerEnd }) => {
 
   return (
     <div className="duration">
-    <div className="hours">
+    <div className="hours h-auto">
       {timeLeft.hours}
       <br />
       hr
     </div>
-    <div className="minutes">
+    <div className="minutes h-auto">
       {timeLeft.minutes} <br />
       min
     </div>
-    <div className="seconds">
+    <div className="seconds h-auto">
       {timeLeft.seconds} <br />
       sec
     </div>

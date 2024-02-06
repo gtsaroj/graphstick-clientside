@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import useFetch from "../../Hook/useFetch";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../CardReducer/CardReducer";
+import { addToFavourite } from "../../CardReducer/loveReducer";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import BalanceIcon from "@mui/icons-material/Balance";
@@ -40,6 +41,19 @@ const Product = () => {
       navigate("/login", { replace: true });
       message.error("please login the page");
     }
+  };
+
+  const handleAddToFavourite = () => {
+    dispatch(
+      addToFavourite({
+        id: data.id,
+        img: data?.attributes.img?.data.attributes.url,
+        price: data?.attributes.price,
+        desc: data.attributes.desc,
+        title: data?.attributes.title,
+        quantity,
+      })
+    );
   };
 
   return (
@@ -185,29 +199,34 @@ const Product = () => {
             </div>
 
             <button className="add" onClick={handleAddToCart}>
-            <lord-icon
-    src="https://cdn.lordicon.com/pbrgppbb.json"
-    trigger="click"
-    >
-</lord-icon>
+              <lord-icon
+                src="https://cdn.lordicon.com/pbrgppbb.json"
+                trigger="click"
+              ></lord-icon>
             </button>
             <div className="link">
-              <div className="item  flex-col items-center">
+              <div
+                className="item  flex-col items-center"
+                onClick={() => handleAddToFavourite}
+              >
                 <lord-icon
                   src="https://cdn.lordicon.com/ulnswmkk.json"
                   trigger="click"
-                    ></lord-icon>
-                    <span className="flex flex-col items-start text-[13px] font-bold"> Add To <span>WishList</span> </span>
-               
+                ></lord-icon>
+                <span className="flex flex-col items-start text-[13px] font-bold">
+                  {" "}
+                  Add To <span>WishList</span>{" "}
+                </span>
               </div>
               <div className="item  flex items-center  ">
-        
-                    <lord-icon
+                <lord-icon
                   src="https://cdn.lordicon.com/qnpnzlkk.json"
                   trigger="click"
                 ></lord-icon>
-           
-                <span className="flex flex-col items-start text-[13px] font-bold">Add To <span>COMPARE</span> </span>
+
+                <span className="flex flex-col items-start text-[13px] font-bold">
+                  Add To <span>COMPARE</span>{" "}
+                </span>
               </div>
             </div>
             <div className="info">
@@ -216,10 +235,12 @@ const Product = () => {
               <span>Tag: T-shirt, Women, Top</span>
             </div>
             <div className="infos">
-              <span className="border-b-[1px]">Description: {data?.attributes?.desc}</span>
-              
+              <span className="border-b-[1px]">
+                Description: {data?.attributes?.desc}
+              </span>
+
               <span className="border-b-[1px]">Additional Information</span>
-              
+
               <span className="border-b-[1px]">FAQ</span>
             </div>
           </div>

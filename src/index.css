@@ -7,7 +7,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 
-
 :root {
   --text-color: #001529;
   --twitter: #1da1f2;
@@ -17,10 +16,11 @@
   --gmail: #db4437;
   --white: #ffffff;
 }
+
 body {
-  margin: 0;
   font-family: "Poppins", sans-serif;
 }
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",

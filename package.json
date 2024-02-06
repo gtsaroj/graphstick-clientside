@@ -25,6 +25,7 @@
     "install": "^0.13.0",
     "khalti-checkout-web": "^2.2.0",
     "localforage": "^1.10.0",
+    "lucide-react": "^0.322.0",
     "match-sorter": "^6.3.1",
     "npm": "^9.6.7",
     "postcss": "^8.4.31",

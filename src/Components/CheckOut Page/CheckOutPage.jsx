@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import "./CheckOut.scss";
 import axios from 'axios';
 import { useLocation } from 'react-router-dom';
 import KhaltiCheckout from "khalti-checkout-web";
@@ -39,7 +38,7 @@ const CheckOutPage = () => {
         publicKey: "test_public_key_8cfdae6270864204b8086b4df9e829f5",
         productIdentity: products?.map((item) => item.id).join(),
         productName: products?.map((item) => item.title).join(),
-        productUrl: "http://localhost:3000",
+        productUrl: "http://localhost:2700",
         eventHandler: {
           onSuccess(payload) {
             // Handle Khalti payment success
@@ -103,12 +102,11 @@ const CheckOutPage = () => {
 
 
   return (
-    <div className="step-1">
-      <div className="checkout">
-        <h3>Basic Information</h3>
-        <div className="form">
-          <form action="" className='form1' onSubmit={handleSubmit}>
-            <label htmlFor="firstName">
+    <div className="flex flex-col sm:items-baseline gap-[10px] py-[40px] px-[20px]">
+        <h3 className='font-ubuntu font-semibold'>Basic Information</h3>
+        <div className="flex flex-col items-center sm:items-baseline px-[30px]">
+          <form action="" className='sm:grid flex flex-col  6 sm:grid-cols-2  items-center sm:grid-rows-3 sm:items-start justify-start gap-y-3 gap-x-3 ' onSubmit={handleSubmit}>
+            <label htmlFor="firstName" className={"flex flex-col items-start"}>
               First Name:
               <input
                 type="text"
@@ -116,9 +114,10 @@ const CheckOutPage = () => {
                 name='firstName'
                 value={customerInfo.firstName}
                 onChange={handleChange}
+                className={`py-[7px] px-[8px] outline-none border-[1px] md:w-full sm:w-[270px] w-full  rounded-md border-black`}
               />
             </label>
-            <label htmlFor="lastName">
+            <label htmlFor="lastName" className={"flex flex-col items-start"}>
               Last Name:
               <input
                 type="text"
@@ -126,9 +125,10 @@ const CheckOutPage = () => {
                 name='lastName'
                 value={customerInfo.lastName}
                 onChange={handleChange}
+                className={`py-[7px] px-[8px] outline-none border-[1px] md:w-full sm:w-[270px] w-full  rounded-md border-black`}
               />
             </label>
-            <label htmlFor="phoneNumber">
+            <label htmlFor="phoneNumber" className={"flex flex-col items-start"}>
               Phone Number:
               <input
                 type="text"
@@ -136,9 +136,10 @@ const CheckOutPage = () => {
                 name='phoneNumber'
                 value={customerInfo.phoneNumber}
                 onChange={handleChange}
+                className={`py-[7px] px-[8px] outline-none border-[1px] md:w-full sm:w-[270px] w-full  rounded-md border-black`}
               />
             </label>
-            <label htmlFor="email">
+            <label htmlFor="email" className={"flex flex-col items-start"}>
               Email Address:
               <input
                 type="email"
@@ -146,9 +147,10 @@ const CheckOutPage = () => {
                 name='email'
                 value={customerInfo.email}
                 onChange={handleChange}
+                className={`py-[7px] px-[8px] outline-none border-[1px] rounded-md md:w-full sm:w-[270px] w-full  border-black`}
               />
             </label>
-            <label htmlFor="shippingAddress">
+            <label htmlFor="shippingAddress" className={"flex flex-col items-start"}>
               Shipping Address:
               <input
                 type="text"
@@ -156,9 +158,10 @@ const CheckOutPage = () => {
                 name='shippingAddress'
                 value={customerInfo.shippingAddress}
                 onChange={handleChange}
+                className={`py-[7px] px-[8px] outline-none md:w-full sm:w-[270px] w-full  border-[1px] rounded-md border-black`}
               />
             </label>
-            <label htmlFor="address">
+            <label htmlFor="address" className={"flex flex-col items-start"}>
               Address:
               <input
                 type="text"
@@ -166,13 +169,14 @@ const CheckOutPage = () => {
                 name='address'
                 value={customerInfo.address}
                 onChange={handleChange}
+                className={`py-[7px] px-[8px] outline-none  md:w-full sm:w-[270px] w-full border-[1px] rounded-md border-black`}
               />
             </label>
-            <button type="submit">Proceed to pay</button>
+            <button type="submit" className='py-[5px] px-[8px] bg-blue-500 w-full rounded-sm hover:bg-blue-400'>Proceed to pay</button>
           </form>
         </div>
       </div>
-    </div>
+ 
   );
 };
 

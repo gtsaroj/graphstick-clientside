@@ -16,6 +16,7 @@
   align-items: center;
   justify-content: center;
   height: 55px;
+
 }
 
 li {
@@ -228,7 +229,7 @@ li .link:hover::after {
     text-align: left;
     transition: 0.2s ease-in-out;
     position: fixed;
-    top: 77px;
+    top: 73px;
     width: 166px;
     background: antiquewhite;
     height: 393px;
