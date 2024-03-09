@@ -2,37 +2,22 @@ import { React } from "react";
 import "./Card.css";
 import { Link } from "react-router-dom";
 import useFetch from "../../Hook/useFetch";
-const Card = ({ item }) => {
+import { CardSkeleton } from "../../SkeletonComponents/ProductSkeleton";
+export const Card = ({ item }) => {
   const { loading } = useFetch(`/products?populate=*&`);
-
 
   return (
     <>
       {loading ? (
-        <div className="pro skeleton">
-          <div className="skeleton-image"></div>
-          <div className="description">
-            <div className="skeleton-modal"></div>
-            <div className="skeleton-title"> </div>
-            <div className="skeleton-price"></div>
-
-            <div className="star">
-              <div className="skeleton-star"></div>
-              <div className="skeleton-star"></div>
-              <div className="skeleton-star"></div>
-              <div className="skeleton-star"></div>
-            </div>
-            <div className="skeleton-cart"></div>
-          </div>
-        </div>
+        <CardSkeleton />
       ) : item ? (
         <Link className="pro" to={`/product/${item.id}`}>
-            <div>
+          <div>
             <img
-            src={item?.attributes?.img?.data?.attributes?.url}
-            alt="not showing"
-          />
-        </div>
+              src={item?.attributes?.img?.data?.attributes?.url}
+              alt="not showing"
+            />
+          </div>
           <div className="description">
             <span className="font-ubuntu font-medium text-[12px]">
               Model 05
@@ -59,4 +44,3 @@ const Card = ({ item }) => {
   );
 };
 
-export default Card;

@@ -123,7 +123,11 @@ const SignUp = () => {
                 </Form.Item>
 
                 <Form.Item>
-                  <Button type="primary" htmlType="submit" className="button   bg-gray-900 text-white rounded-sm hover:bg-blue-500 ">
+                  <Button
+                    type="primary"
+                    htmlType="submit"
+                    className="button   bg-gray-900 text-white rounded-sm hover:bg-blue-500 "
+                  >
                     Submit {isLoading && <Spin size="small" />}
                   </Button>
                 </Form.Item>

@@ -12,8 +12,7 @@
   .left {
     .mainImg {
         display: flex;
-        flex-direction: row;
-       
+        flex-direction: row;   
         justify-content:space-evenly;
    @media screen and (max-width: 578px){
     display: flex;
@@ -21,14 +20,6 @@
     align-items: center;
     justify-content: center;
    }
-      img {
-        width: 80%;
-        height: 50%;
-
-        @media screen and (max-width: 578px) {
-            width: 100%;
-        }
-      }
     }
   }
   .right {
@@ -36,7 +27,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
-    gap: 15px;
+    gap: 4rem;
     flex-wrap: wrap;
 
     .quantity {

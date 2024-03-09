@@ -189,7 +189,7 @@ const Offer = () => {
           </div>
           <div className="right">
             <h1> {data?.attributes?.title}</h1>
-            <span className="price">Rs. {data?.attributes?.price}</span>
+            <span className="price">Rs. {data?.attributes?.newprice}</span>
             <p>{data?.attributes?.specification}</p>
             <div className="quantity">
               <button onClick={() => setquantity((prev) => prev + 1)}>+</button>
@@ -203,7 +203,7 @@ const Offer = () => {
               </button>
             </div>
 
-            <button className="add" onClick={handleAddToCart}>
+            <button className="add z-[1]" onClick={handleAddToCart}>
             <lord-icon
     src="https://cdn.lordicon.com/pbrgppbb.json"
     trigger="click"
@@ -216,7 +216,7 @@ const Offer = () => {
                   src="https://cdn.lordicon.com/ulnswmkk.json"
                   trigger="click"
                     ></lord-icon>
-                    <span className="flex flex-col items-start text-[13px] font-bold"> Add To <span>WishList</span> </span>
+                    <span className="sm:flex   hidden sm:lex-col items-start text-[13px] font-bold"> Add To <span>WishList</span> </span>
                
               </div>
               <div className="item  flex items-center  ">
@@ -226,7 +226,7 @@ const Offer = () => {
                   trigger="click"
                 ></lord-icon>
            
-                <span className="flex flex-col items-start text-[13px] font-bold">Add To <span>COMPARE</span> </span>
+                <span className="sm:flex hidden sm:flex-col  items-start text-[13px] font-bold">Add To <span>COMPARE</span> </span>
               </div>
             </div>
             <div className="info">

@@ -2,12 +2,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 9px 50px;
-  background-color: #06d1ff8c;
-  box-shadow: 0 3px 5px rgb(43 113 160 / 76%);
   position: sticky;
   top: 0%;
   left: 0px;
+  right: 0;
+  bottom: 0px;
   z-index: +3;
 }
 
@@ -16,7 +15,6 @@
   align-items: center;
   justify-content: center;
   height: 55px;
-
 }
 
 li {
@@ -30,23 +28,11 @@ li .link {
   text-decoration: none;
   font-size: 16px;
   font-weight: 600;
-  color: black;
+
   transition: 0.3s ease;
 }
 
-.linkImg {
-  position: relative;
-}
-#header img {
-  position: absolute;
-  width: 76px;
-  height: 66px;
-  font-weight: 800;
-  top: 2px;
-  left: 20px;
-  filter: contrast(175%) brightness(3%);
-  /* filter: drop-shadow(3px 3px red) sepia(100%) drop-shadow(-3px -3px blue); */
-}
+
 
 li .link:hover,
 li .link.active {
@@ -120,20 +106,20 @@ li .link:hover::after {
   position: relative;
   cursor: pointer;
 }
-.accountHandle:hover  .dropdown{
+.accountHandle:hover .dropdown {
   transition: opacity 0.3s ease-in-out; /* Add a smooth transition for opacity */
   opacity: 1;
   visibility: visible;
 }
 
-.boxdiv:hover .dropdown{
+.boxdiv:hover .dropdown {
   visibility: visible;
   opacity: 1;
   background-color: red;
 }
 .dropdown {
   visibility: hidden;
-  background-color: 	#1B1212;
+  background-color: var(--dark-background);
   height: 200px;
   border-radius: 3px;
   justify-content: center;
@@ -146,22 +132,20 @@ li .link:hover::after {
   right: -47px;
   top: 35px;
   opacity: 0;
-
-  
-
 }
-.boxdiv{
+.boxdiv {
   width: 37px;
   height: 37px;
   position: absolute;
-  background-color: 		#1B1212;
+  background-color: var(--dark-background);
   right: 61px;
   top: -4px;
   transform: rotate(90);
   transform: rotateZ(45deg);
   z-index: 1;
 }
-.dropdown li {
+.dropdown li::after {
+  content: "";
   margin-left: 39px;
   width: 126px;
   display: flex;
@@ -174,7 +158,7 @@ li .link:hover::after {
   visibility: hidden;
   display: flex;
   flex-direction: column;
-  background-color: 	#1B1212;
+  background-color: #1b1212;
   width: 200px;
   color: white;
   padding: 57px 19px;
@@ -219,10 +203,30 @@ li .link:hover::after {
 /*=========================BreakPoint===================== */
 
 /* Medium screen */
-@media screen and (max-width: 768px) {
-  #navbar .accountHandle{
+
+
+@media screen and (max-width: 1000px) {
+  
+
+  ul::before {
+    content: "Graphstick Nepal";
+    color: white;
+    font-family: "baloo";
+    border-bottom: 1px solid white;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 10px;
+  }
+
+  #navbar .accountHandle {
     display: none;
   }
+  li .link {
+    color: white;
+  }
+
   #navbar {
     display: flex;
     flex-direction: column;
@@ -230,14 +234,14 @@ li .link:hover::after {
     transition: 0.2s ease-in-out;
     position: fixed;
     top: 73px;
-    width: 166px;
-    background: antiquewhite;
+    width: 200px;
+    right: 50px;
+    background: var(--dark-background);
     height: 393px;
-    align-items: center;
+    align-items: stretch;
     justify-content: flex-start;
     height: 100%;
-    gap: 10px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    gap: 2rem;
   }
 
   li .link.active::after,
@@ -288,17 +292,8 @@ li .link:hover::after {
 
     width: 13px;
   }
-  .mobile .accountHandle{
+  .mobile .accountHandle {
     visibility: visible;
   }
 }
 
-/* Small devices */
-@media screen and (max-width: 576px) {
- 
-}
-
-/* Very small devices */
-@media screen and (max-width: 378px) {
- 
-}

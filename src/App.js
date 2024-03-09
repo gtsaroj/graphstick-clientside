@@ -2,7 +2,7 @@ import React from "react";
 import {
   createBrowserRouter,
   RouterProvider,
-  Outlet, // Import the Routes component
+  Outlet,
 
 } from "react-router-dom";
 import "./App.css"
@@ -20,9 +20,10 @@ import Signup from "./Authenticator/Signup/Signup";
 import Login from "./Authenticator/Login/Login";
 import Profile from "./Profile/Profile";
 import Offer from "./Pages/Offer/Offer";
+import Wishlist from "./Components/Wishlist/Wishlist";
 const Layout = () => {
   return (
-    <div className="homePage">
+    <div className="flex flex-col items-stretch justify-center">
 
       <Navbar />
       <Outlet />
@@ -77,20 +78,25 @@ function App() {
         },
         {
           path: '/signup',
-          element: <Signup/>
+          element: <Signup />
         },
         {
           path: "/login",
-          element: <Login/>
+          element: <Login />
         },
         {
           path: "/profile",
-          element: <Profile/>
+          element: <Profile />
         },
         {
           path: "/offer/:id",
-          element: <Offer/>
+          element: <Offer />
         }
+        , 
+        {
+          path: "/wishlist",
+          element : <Wishlist/>
+      }
 
       ]
     }

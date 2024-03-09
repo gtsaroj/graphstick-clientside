@@ -2,21 +2,19 @@ import { React, useEffect, useState } from "react";
 import "./Cart.css";
 import { useDispatch, useSelector } from "react-redux";
 import { removeItem } from "../../CardReducer/CardReducer";
-import ProductionQuantityLimitsIcon from "@mui/icons-material/ProductionQuantityLimits";
 import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import DeleteIcon from "@mui/icons-material/Delete";
 
 const Cart = () => {
   const navigate = useNavigate();
-  console.log(navigate);
 
   const [empty, setEmpty] = useState(true);
-  const [checkout, setCheckout] = useState(false);
 
   // }
 
   const products = useSelector((state) => state.cart.products);
+  console.log(products)
 
   function handleCheck() {
     if (products?.length > 0) {

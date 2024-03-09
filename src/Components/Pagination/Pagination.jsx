@@ -9,15 +9,15 @@ const Pagination = ({ totalItems, itemsPerPage, currentPage, onPageChange }) => 
   }
 
   return (
-    <ul className="pagination flex gap-[5px]" >
+    <div className="pagination flex gap-[5px] justify-center w-full items-center" >
       {pageNumbers.map((number) => (
-        <li key={number} className={` bg-gray-900 text-white rounded-sm  ${number === currentPage ? 'active' : ''} `}>
-          <button className="py-[6px] px-[7px] rounded-sm " onClick={() => onPageChange(number)}>
+        <div key={number} className={` bg-[var(--dark-foreground)] text-white rounded-sm  ${number === currentPage ? 'active' : ''} `}>
+          <button className="py-[6px] px-7 rounded-sm " onClick={() => onPageChange(number)}>
             {number}
           </button>
-        </li>
+        </div>
       ))}
-    </ul>
+    </div>
   );
 };
 

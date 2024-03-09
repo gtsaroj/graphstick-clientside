@@ -2,7 +2,7 @@
 
 
 
-#product1 .pro {
+ .pro {
     position: relative;
     width: 13%;
     min-width: 150px;
@@ -23,37 +23,37 @@
 
 }
 
-#product1 .pro:hover {
+ .pro:hover {
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.35  );
   
 }
 
-#product1 .pro .description {
+ .pro .description {
     text-align: start;
     padding: 1px 0px;
 }
 
 
 
-#product1 .pro .description h5 {
+ .pro .description h5 {
     padding-top: 7px;
     color: #1a1a1a;
     font-size: 12px;
 }
 
-#product1 .pro .description .star i {
+ .pro .description .star i {
     font-size: 12px;
     color:#faca51;
 }
 
-#product1 .pro .description h4 {
+ .pro .description h4 {
     padding-top: 7px;
     font-size: 15px;
     font-weight: 700;
     color: #088178;
 }
 
-#product1 .pro .cart {
+ .pro .cart {
     /* width: 40px;
     height: 40px; */
     padding: 12px;
@@ -66,7 +66,7 @@
     transition: 0.1s ease-in-out;
 }
 
-#product1 .pro .cart:hover {
+ .pro .cart:hover {
     transform: scale(1.1);
     background-color: #1a1a1a;
 }
@@ -171,26 +171,26 @@
 
 /* Medium screen */
 @media screen and (max-width: 768px) {
-    #product1 .pro img {
+     .pro img {
 
         height: 113px;
     }
 
-    #product1 .pro .description span {
+     .pro .description span {
         font-size: 12px;
     }
 
-    #product1 .pro .description h5 {
+     .pro .description h5 {
         font-size: 12px;
     }
 
-    #product1 .pro .description .star i {
+     .pro .description .star i {
         font-size: 11px;
         padding: 5px 1px;
     }
 
 
-    #product1 .pro .cart {
+     .pro .cart {
         padding: 10px;
         font-size: 11px;
     }
@@ -199,12 +199,12 @@
         font-size: 25px;
     }
 
-    #product1 p {
+     p {
 
         font-size: 16px;
     }
 
-    #product1 .pro .description h4 {
+     .pro .description h4 {
         padding-top: 7px;
         font-size: 12px;
 
@@ -223,30 +223,30 @@
         margin: 0px;
     
       }
-        #product1 .pro img {
+         .pro img {
             height: 123px;
            
         }
     
-        #product1 .pro .description span {
+         .pro .description span {
             font-size: 13px;
         }
     
-        #product1 .pro .description .star i {
+         .pro .description .star i {
             font-size: 12px;
             padding: 5px 1px;
         }
     
-        #product1 .pro .description h4 {
+         .pro .description h4 {
             padding-top: 2px;
             font-size: 15px;
         }
     
-        #product1 .pro .cart {
+         .pro .cart {
             display: block;
         }
     
-        #product1 .pro .cart {
+         .pro .cart {
             padding: 11px;
             font-size: 13px;
         }
